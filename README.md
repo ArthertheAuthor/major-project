@@ -1,0 +1,1 @@
+This is a mvp for EduEdge AI : an offline learning platform for rural students.
