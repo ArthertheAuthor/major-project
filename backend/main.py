@@ -26,3 +26,21 @@ import json
 def get_chapters():
     with open("data/chapters.json") as f:
         return json.load(f)   
+    
+
+from utils.mindmap import generate_mindmap
+
+@app.post("/mindmap")
+def mindmap_api(data: dict):
+    text = data.get("text", "")
+    return generate_mindmap(text)
+
+progress = {}
+
+@app.post("/progress")
+def save_progress(data: dict):
+    user = data.get("user", "default")
+    score = data.get("score", 0)
+    
+    progress[user] = score
+    return {"status": "saved"}
