@@ -1,2 +1,5 @@
 def get_summary(text):
-    return text[:200] + "A computer is an electronic device that processes data and performs tasks efficiently."
+    sentences = text.split(".")
+    sentences = [s.strip() for s in sentences if len(s.strip()) > 20]
+
+    return ". ".join(sentences[:2]) + "." if sentences else "No summary available."

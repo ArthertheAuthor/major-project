@@ -1,15 +1,27 @@
+from collections import Counter
+
+def extract_keywords(text):
+    words = text.lower().split()
+    words = [w for w in words if len(w) > 4]
+
+    freq = Counter(words)
+    return [w for w, _ in freq.most_common(5)]
+
 def generate_mindmap(text):
-    words = list(set(text.split()))
-    words = [w for w in words if len(w) > 4][:6]  # limit nodes
+    keywords = extract_keywords(text)
 
-    root = words[0] if words else "Topic"
+    if not keywords:
+        return {"nodes": [], "edges": []}
 
-    nodes = [{"id": root}]
+    nodes = [{"id": keywords[0]}]
     edges = []
 
-    for w in words[1:]:
-        nodes.append({"id": w})
-        edges.append({"source": root, "target": w})
+    for i, word in enumerate(keywords[1:]):
+        nodes.append({"id": word})
+        edges.append({
+            "source": keywords[0],
+            "target": word
+        })
 
     return {
         "nodes": nodes,
