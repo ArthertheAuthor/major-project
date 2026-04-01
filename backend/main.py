@@ -1,15 +1,24 @@
 from fastapi import FastAPI
-from utils.summarizer import get_summary
-from utils.quiz_generator import generate_quiz
-from utils.mindmap import generate_mindmap
-
+from fastapi.middleware.cors import CORSMiddleware
 import json
-import time
 from collections import Counter
 
 app = FastAPI()
 
-# -------------------- UTIL FUNCTIONS --------------------
+# -------------------- CORS (IMPORTANT) --------------------
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+# -------------------- MOCK DATABASE --------------------
+users = {}
+progress = {}
+
+# -------------------- UTILS --------------------
 
 def clean_text(text):
     return " ".join(text.strip().split())
@@ -17,173 +26,137 @@ def clean_text(text):
 def extract_keywords(text):
     words = text.lower().split()
     words = [w for w in words if len(w) > 4]
-    
     freq = Counter(words)
     return [w for w, _ in freq.most_common(5)]
 
-# Simple cache
-cache = {}
+def get_summary(text):
+    sentences = text.split(".")
+    return ". ".join(sentences[:2]).strip() + "."
 
-# -------------------- BASIC ROUTES --------------------
+def generate_quiz(text):
+    return [
+        {
+            "question": "What is the main topic?",
+            "options": ["CPU", "Memory", "Disk", "Network"],
+            "answer": "CPU"
+        }
+    ]
 
-@app.get("/")
-def home():
-    return {"message": "Backend running"}
+def generate_mindmap(text):
+    keywords = extract_keywords(text)
 
-@app.get("/health")
-def health():
-    return {"status": "ok"}
+    nodes = []
+    edges = []
+
+    for i, word in enumerate(keywords):
+        nodes.append({
+            "id": i + 1,
+            "label": word
+        })
+
+    for i in range(1, len(nodes)):
+        edges.append({
+            "from": 1,
+            "to": i + 1
+        })
+
+    return {
+        "nodes": nodes,
+        "edges": edges
+    }
+
+# -------------------- AUTH APIs --------------------
+
+@app.post("/register")
+def register(data: dict):
+    email = data.get("email")
+    password = data.get("password")
+
+    users[email] = password
+
+    return {"message": "User registered"}
+
+@app.post("/login")
+def login(data: dict):
+    try:
+        email = data.get("email")
+        password = data.get("password")
+
+        # 🔴 validation
+        if not email or not password:
+            return {"message": "Missing email or password"}
+
+        # 🔴 check user exists
+        if email not in users:
+            return {"message": "User not found"}
+
+        # 🔴 check password
+        if users[email] != password:
+            return {"message": "Incorrect password"}
+
+        return {
+            "message": "Login successful",
+            "user": email.split("@")[0]
+        }
+
+    except Exception as e:
+        return {"error": str(e)}
+
+# -------------------- OPTIONAL ONBOARDING --------------------
+
+@app.post("/onboarding")
+def onboarding(data: dict):
+    return {"status": "saved"}
 
 # -------------------- CHAPTERS --------------------
 
 @app.get("/chapters")
 def get_chapters():
     with open("data/chapters.json") as f:
-        return json.load(f)
+        data = json.load(f)
+
+    # Ensure required format
+    for i, ch in enumerate(data):
+        ch["id"] = i + 1
+        ch["subject"] = ch.get("subject", "general")
+
+    return data
 
 # -------------------- SUMMARY --------------------
 
 @app.post("/summary")
 def summary_api(data: dict):
-    try:
-        text = clean_text(data.get("text", ""))
-
-        if not text:
-            return {"error": "Empty input"}
-
-        if text in cache:
-            summary = cache[text]
-        else:
-            summary = get_summary(text)
-            cache[text] = summary
-
-        return {
-            "summary": summary,
-            "confidence": "medium",
-            "mode": "offline",
-            "length": len(text)
-        }
-
-    except Exception as e:
-        return {"error": str(e)}
+    text = clean_text(data.get("text", ""))
+    return {
+        "summary": get_summary(text)
+    }
 
 # -------------------- QUIZ --------------------
 
 @app.post("/quiz")
 def quiz_api(data: dict):
-    try:
-        text = clean_text(data.get("text", ""))
-
-        if not text:
-            return {"error": "Empty input"}
-
-        keywords = extract_keywords(text)
-        focus = keywords[0] if keywords else None
-
-        quiz = generate_quiz(text, focus)
-
-        return {
-            "quiz": quiz,
-            "confidence": "medium",
-            "mode": "offline"
-        }
-
-    except Exception as e:
-        return {"error": str(e)}
+    text = clean_text(data.get("text", ""))
+    return {
+        "quiz": generate_quiz(text)
+    }
 
 # -------------------- MINDMAP --------------------
 
 @app.post("/mindmap")
 def mindmap_api(data: dict):
-    try:
-        text = clean_text(data.get("text", ""))
+    text = clean_text(data.get("text", ""))
+    return generate_mindmap(text)
 
-        if not text:
-            return {"error": "Empty input"}
-
-        graph = generate_mindmap(text)
-
-        return {
-            "mindmap": graph,
-            "confidence": "low",
-            "mode": "offline"
-        }
-
-    except Exception as e:
-        return {"error": str(e)}
-
-# -------------------- PROGRESS TRACKING --------------------
-
-progress = {}
+# -------------------- PROGRESS --------------------
 
 @app.post("/progress")
 def save_progress(data: dict):
     user = data.get("user", "default")
     score = data.get("score", 0)
-    topic = data.get("topic", "general")
 
     if user not in progress:
         progress[user] = []
 
-    progress[user].append({
-        "topic": topic,
-        "score": score
-    })
+    progress[user].append(score)
 
     return {"status": "saved"}
-
-@app.get("/weak-areas")
-def weak_areas(user: str = "default"):
-    user_data = progress.get(user, [])
-
-    weak = [x["topic"] for x in user_data if x["score"] < 50]
-
-    return {
-        "weak_topics": list(set(weak))
-    }
-
-# -------------------- SYNC (FAKE BUT IMPORTANT) --------------------
-
-@app.get("/sync")
-def sync():
-    return {
-        "status": "synced",
-        "updated_items": ["progress", "new_questions"]
-    }
-
-# -------------------- LEARNING PIPELINE --------------------
-
-@app.post("/learn")
-def learn(data: dict):
-    try:
-        start = time.time()
-
-        text = clean_text(data.get("text", ""))
-        user = data.get("user", "default")
-
-        if not text:
-            return {"error": "Empty input"}
-
-        summary = get_summary(text)
-
-        keywords = extract_keywords(text)
-        focus = keywords[0] if keywords else None
-
-        quiz = generate_quiz(text, focus)
-        mindmap = generate_mindmap(text)
-
-        end = time.time()
-
-        return {
-            "summary": summary,
-            "quiz": quiz,
-            "mindmap": mindmap,
-            "mode": "offline",
-            "confidence": "medium",
-            "time_taken": round(end - start, 3)
-        }
-
-    except Exception as e:
-        return {"error": str(e)}
-    
-    from utils.preprocess import clean_text
