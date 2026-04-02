@@ -2,23 +2,21 @@ const API = "http://127.0.0.1:8000";
 let currentUser = null;
 let activeChapter = null;
 
-// --- UI UTILS ---
+// UI Switcher
 function toggleScreen(id) {
     document.getElementById('screen-auth').classList.add('hidden');
     document.getElementById('screen-dashboard').classList.add('hidden');
     document.getElementById(id).classList.remove('hidden');
 }
 
+// AI Feedback Controls
 function showLoader(text) {
     document.getElementById('ai-loader').classList.remove('hidden');
     document.getElementById('loader-text').innerText = text;
 }
+function hideLoader() { document.getElementById('ai-loader').classList.add('hidden'); }
 
-function hideLoader() { 
-    document.getElementById('ai-loader').classList.add('hidden'); 
-}
-
-// --- AUTH LOGIC (Fix #5: Ensure data.user check works) ---
+// AUTHENTICATION
 async function handleAuth(type) {
     const email = document.getElementById('auth-email').value.trim();
     const password = document.getElementById('auth-pass').value.trim();
@@ -36,152 +34,118 @@ async function handleAuth(type) {
         const data = await res.json();
 
         if (type === 'register') {
-            alert("Registration successful! Now please Login.");
+            alert("Account Registered! You can now Login.");
         } else {
-            // Checks if backend returned the "user" key correctly
             if (data.user) {
                 currentUser = data.user;
-                document.getElementById('user-display').innerText = `Student: ${currentUser}`;
+                document.getElementById('user-display').innerText = `ID: ${currentUser}`;
                 toggleScreen('screen-dashboard');
                 loadChapters();
-            } else {
-                alert(data.message || "User not found. Please register first.");
+            } else { 
+                alert(data.message || "User not found. Please Register first!"); 
             }
         }
     } catch (e) { 
-        alert("CRITICAL: Cannot connect to Backend. Is main.py running?"); 
+        alert("Backend Offline! Ensure main.py is running on port 8000."); 
     }
 }
 
-// --- CHAPTERS (Fix #2: Simplified handling) ---
+// LOADING CONTENT
 async function loadChapters() {
     try {
         const res = await fetch(`${API}/chapters`);
         const data = await res.json();
-        
-        // Backend returns a list directly now
-        const chapters = data; 
+        // Support both nested subjects or flat list
+        const chapters = data.subjects ? data.subjects[0].chapters : data;
         const list = document.getElementById('chapter-list');
         list.innerHTML = "";
 
         chapters.forEach(ch => {
             const b = document.createElement('button');
-            b.className = "w-full text-left p-3 rounded-lg hover:bg-slate-700 text-sm text-slate-400 transition mb-1";
+            b.className = "w-full text-left p-3 rounded-lg hover:bg-slate-700 text-sm text-slate-400 transition mb-1 border border-transparent hover:border-slate-600";
             b.innerText = ch.title;
             b.onclick = () => {
-                activeChapter = ch; // This now includes ch.content!
+                activeChapter = ch;
                 document.getElementById('view-empty').classList.add('hidden');
                 document.getElementById('view-main').classList.remove('hidden');
                 document.getElementById('chapter-title').innerText = ch.title;
-                document.getElementById('ai-content-box').innerHTML = 
-                    `<p class='italic text-slate-500'>Module loaded. Neural inference engine standby...</p>`;
+                document.getElementById('ai-content-box').innerHTML = "<p class='italic text-slate-600 font-mono'>Local model loaded. Awaiting instruction...</p>";
             };
             list.appendChild(b);
         });
-    } catch (e) {
-        console.error("Chapter Load Error:", e);
-    }
+    } catch (e) { console.error("Chapter Error:", e); }
 }
 
-// --- AI FEATURES (Fix #1 & #4: Use .content & check if selected) ---
-
+// AI FEATURES
 async function fetchSummary() {
-    if (!activeChapter) return alert("Select a chapter first!");
-    
-    showLoader("SYNTHESIZING SUMMARY...");
+    if (!activeChapter) return;
+    showLoader("NEURAL SUMMARIZER BOOTING...");
     try {
         const res = await fetch(`${API}/summary`, {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
-            // FIX: Sending full content, not just title
-            body: JSON.stringify({ text: activeChapter.content }) 
+            body: JSON.stringify({ text: activeChapter.content || activeChapter.title })
         });
         const data = await res.json();
-        
         setTimeout(() => {
             hideLoader();
             document.getElementById('ai-content-box').innerHTML = `
-                <h4 class='text-blue-400 font-bold mb-2 uppercase text-xs'>AI Summary</h4>
-                <p class='text-lg leading-relaxed text-slate-200'>${data.summary}</p>
-            `;
+                <h4 class='text-blue-400 font-bold mb-4 uppercase text-xs tracking-widest'>AI Generated Summary</h4>
+                <p class='text-lg leading-relaxed text-slate-300'>${data.summary}</p>`;
         }, 1200);
-    } catch (e) { hideLoader(); alert("Summary API Error"); }
+    } catch (e) { hideLoader(); alert("API Error"); }
 }
 
 async function fetchMindmap() {
-    if (!activeChapter) return alert("Select a chapter first!");
-
-    showLoader("MAPPING KNOWLEDGE GRAPH...");
+    if (!activeChapter) return;
+    showLoader("MAPPING SEMANTIC NODES...");
     try {
         const res = await fetch(`${API}/mindmap`, {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
-            // FIX: Sending full content
-            body: JSON.stringify({ text: activeChapter.content }) 
+            body: JSON.stringify({ text: activeChapter.content || activeChapter.title })
         });
         const data = await res.json();
-        
         setTimeout(() => {
             hideLoader();
             document.getElementById('ai-content-box').innerHTML = `
-                <h4 class='text-purple-400 font-bold mb-4 uppercase text-xs'>Semantic Relationship Map</h4>
-                <div id='map-container' style='height:350px' class='bg-slate-950 rounded-xl border border-slate-800'></div>
-            `;
-            
-            // Fix #3: Rendering with nodes and edges
-            const container = document.getElementById('map-container');
-            const options = {
+                <h4 class='text-purple-400 font-bold mb-4 uppercase text-xs tracking-widest'>Concept Knowledge Graph</h4>
+                <div id='map' style='height:350px' class='bg-slate-950 rounded-xl border border-slate-800'></div>`;
+            new vis.Network(document.getElementById('map'), { nodes: data.nodes, edges: data.edges }, {
                 nodes: { color: '#3b82f6', font: { color: '#fff', size: 14 }, shape: 'dot' },
-                edges: { color: '#475569', arrows: 'to' },
-                physics: { enabled: true }
-            };
-            new vis.Network(container, { nodes: data.nodes, edges: data.edges }, options);
+                edges: { color: '#475569', arrows: 'to' }
+            });
         }, 1200);
-    } catch (e) { hideLoader(); alert("Mindmap API Error"); }
+    } catch (e) { hideLoader(); alert("API Error"); }
 }
 
 async function fetchQuiz() {
-    if (!activeChapter) return alert("Select a chapter first!");
-
-    showLoader("GENERATING ADAPTIVE QUIZ...");
+    if (!activeChapter) return;
+    showLoader("SYNTHESIZING QUIZ MODULE...");
     try {
         const res = await fetch(`${API}/quiz`, {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
-            // FIX: Sending full content
-            body: JSON.stringify({ text: activeChapter.content }) 
+            body: JSON.stringify({ text: activeChapter.content || activeChapter.title })
         });
         const data = await res.json();
-        
         setTimeout(() => {
             hideLoader();
             const q = data.quiz[0];
             document.getElementById('ai-content-box').innerHTML = `
-                <h4 class='text-emerald-400 font-bold mb-6 uppercase text-xs'>Knowledge Validation</h4>
-                <p class='text-white text-xl mb-6'>${q.question}</p>
+                <h4 class='text-emerald-400 font-bold mb-6 uppercase text-xs tracking-widest'>Knowledge Check</h4>
+                <p class='text-xl text-white mb-6 font-medium'>${q.question}</p>
                 <div class='grid grid-cols-1 gap-3'>
-                    ${q.options.map(opt => `
-                        <button onclick="handleQuizAnswer('${opt}', '${q.answer}')" 
-                                class='p-4 bg-slate-800 border border-slate-700 rounded-xl hover:border-blue-500 hover:bg-blue-900/20 text-left transition'>
-                            ${opt}
-                        </button>
-                    `).join('')}
-                </div>
-            `;
+                    ${q.options.map(o => `<button onclick="handleResult('${o}', '${q.answer}')" class='p-4 bg-slate-800 border border-slate-700 rounded-xl hover:border-blue-500 hover:bg-blue-900/20 text-left transition'>${o}</button>`).join('')}
+                </div>`;
         }, 1200);
-    } catch (e) { hideLoader(); alert("Quiz API Error"); }
+    } catch (e) { hideLoader(); alert("API Error"); }
 }
 
-async function handleQuizAnswer(selected, correct) {
-    if (selected === correct) {
-        alert("Correct! Progress updated in local database.");
-        // Optional: Send score to /progress
-        await fetch(`${API}/progress`, {
-            method: 'POST',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({ user: currentUser, score: 1 })
-        });
+function handleResult(sel, cor) {
+    if (sel === cor) {
+        alert("Correct! Progress synced locally.");
     } else {
-        alert(`Incorrect. The system suggests reviewing the summary.`);
+        alert("Incorrect. Reviewing the summary is recommended.");
     }
 }

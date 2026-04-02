@@ -13,38 +13,65 @@
     <nav class="border-b border-slate-800 bg-[#1e293b]/80 backdrop-blur-md p-4 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center font-bold text-white shadow-lg shadow-blue-900/20">E</div>
+                <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center font-bold text-white shadow-lg">E</div>
                 <h1 class="text-xl font-bold tracking-tight">Edu<span class="text-blue-500">AI</span></h1>
-                <span class="text-[10px] bg-blue-500/10 text-blue-400 px-2 py-1 rounded border border-blue-400/20 ml-2 font-mono uppercase">Offline V1</span>
+                <span class="text-[10px] bg-blue-500/10 text-blue-400 px-2 py-1 rounded border border-blue-400/20 ml-2 font-mono uppercase tracking-tighter">Offline V1</span>
             </div>
-            <div class="flex items-center gap-4">
-                <span id="user-display" class="text-sm text-slate-400 font-medium">Guest Mode</span>
-            </div>
+            <div id="user-display" class="text-sm text-slate-400 font-medium italic">Edge Inference Mode</div>
         </div>
     </nav>
 
     <div id="screen-auth" class="flex flex-col items-center justify-center pt-24 px-4">
         <div class="bg-[#1e293b] p-10 rounded-3xl border border-slate-700 shadow-2xl w-full max-w-md">
-            <h2 class="text-3xl font-bold text-white mb-2 text-center">Neural Access</h2>
+            <h2 class="text-3xl font-bold text-white mb-2 text-center text-white">Neural Access</h2>
             <p class="text-slate-400 text-center mb-8 text-sm">Initialize your local offline session.</p>
             
             <div class="space-y-4">
-                <div class="space-y-1">
-                    <label class="text-xs font-bold text-slate-500 ml-1 uppercase">Email Address</label>
-                    <input id="auth-email" type="email" placeholder="student@edu.ai" 
-                        class="w-full p-4 rounded-2xl bg-slate-900 border border-slate-700 focus:border-blue-500 outline-none transition-all text-white">
-                </div>
-                <div class="space-y-1">
-                    <label class="text-xs font-bold text-slate-500 ml-1 uppercase">Password</label>
-                    <input id="auth-pass" type="password" placeholder="••••••••" 
-                        class="w-full p-4 rounded-2xl bg-slate-900 border border-slate-700 focus:border-blue-500 outline-none transition-all text-white">
-                </div>
+                <input id="auth-email" type="email" placeholder="Email" class="w-full p-4 rounded-2xl bg-slate-900 border border-slate-700 focus:border-blue-500 outline-none transition-all text-white">
+                <input id="auth-pass" type="password" placeholder="Password" class="w-full p-4 rounded-2xl bg-slate-900 border border-slate-700 focus:border-blue-500 outline-none transition-all text-white">
                 
                 <div class="pt-4 space-y-3">
-                    <button onclick="handleAuth('login')" 
-                        class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 rounded-2xl transition-all shadow-lg shadow-blue-600/20 active:scale-95">
-                        Login
-                    </button>
-                    
-                    <button onclick="handleAuth('register')" 
-                        class="w
+                    <button onclick="handleAuth('login')" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 rounded-2xl transition-all active:scale-95 shadow-lg shadow-blue-600/20">Login</button>
+                    <button onclick="handleAuth('register')" class="w-full bg-transparent border border-slate-700 hover:bg-slate-800 text-slate-400 py-3 rounded-2xl text-sm transition-all">Register New Account</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="screen-dashboard" class="hidden max-w-7xl mx-auto grid grid-cols-12 gap-6 p-6">
+        <aside class="col-span-12 lg:col-span-3">
+            <div class="bg-[#1e293b] rounded-2xl border border-slate-700 p-5 sticky top-24">
+                <h3 class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-4">Offline Modules</h3>
+                <div id="chapter-list" class="space-y-2"></div>
+            </div>
+        </aside>
+
+        <main class="col-span-12 lg:col-span-9 bg-[#1e293b] rounded-2xl border border-slate-700 min-h-[600px] relative overflow-hidden">
+            <div id="ai-loader" class="hidden absolute inset-0 bg-[#0f172a]/95 backdrop-blur-sm z-50 flex flex-col items-center justify-center">
+                <div class="spinner mb-4"></div>
+                <p id="loader-text" class="text-blue-400 font-mono text-sm animate-pulse uppercase tracking-widest">Processing...</p>
+            </div>
+
+            <div id="view-empty" class="h-full flex flex-col items-center justify-center p-12 text-center">
+                <div class="text-6xl mb-6 opacity-20">🧠</div>
+                <h2 class="text-2xl font-bold text-white">Ready for Analysis</h2>
+                <p class="text-slate-500 mt-2">Select a chapter from the sidebar to begin local AI processing.</p>
+            </div>
+
+            <div id="view-main" class="hidden p-8">
+                <div class="flex flex-col md:flex-row justify-between items-center mb-8 pb-6 border-b border-slate-800">
+                    <h2 id="chapter-title" class="text-3xl font-bold text-white"></h2>
+                    <div class="flex gap-2">
+                        <button onclick="fetchSummary()" class="bg-slate-800 hover:bg-blue-600 px-4 py-2 rounded-xl text-sm font-semibold border border-slate-700 transition-all">✨ Summary</button>
+                        <button onclick="fetchMindmap()" class="bg-slate-800 hover:bg-purple-600 px-4 py-2 rounded-xl text-sm font-semibold border border-slate-700 transition-all">🧠 Mindmap</button>
+                        <button onclick="fetchQuiz()" class="bg-slate-800 hover:bg-emerald-600 px-4 py-2 rounded-xl text-sm font-semibold border border-slate-700 transition-all">📝 Quiz</button>
+                    </div>
+                </div>
+                <div id="ai-content-box" class="bg-slate-900/50 rounded-2xl p-6 border border-slate-800 min-h-[400px]"></div>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
