@@ -1,0 +1,52 @@
+{
+  "subjects": [
+    {
+      "id": "eng",
+      "name": "English",
+      "chapters": [
+        {
+          "id": 1,
+          "title": "Unit 1: The Fun They Had and The Road Not Taken",
+          "pdf_path": "data/files/iebe101.pdf",
+          "content_file": "data/files/iebe101.txt"
+        },
+        {
+            "id": 2,
+            "title": "Unit 1: The Sound of Music and Wind ",
+            "pdf_path": "data/files/iebe102.pdf",
+            "content_file": "data/files/iebe102.txt"
+        },
+        {
+            "id": 3,
+            "title": "Unit 3: The Little Girl and Rain on the Root",
+            "pdf_path":"data/files/iebe103.pdf",
+            "content_file":"data/files/iebe103.txt"
+        }
+      ]
+    },
+    {
+        "id": "sci",
+        "name": "Science",
+        "chapters": [
+        {
+            "id": 1,
+            "title": "Unit 1: Matter in Our Surroundings",
+            "pdf_path": "data/files/iesc101.pdf",
+            "content_file": "data/files/iesc101.txt"
+        },
+        {
+            "id": 2,
+            "title": "Unit 2: Is Matter Around Us Pure",
+            "pdf_path": "data/files/iesc102.pdf",
+            "content_file": "data/files/iesc102.txt"
+        },
+        {
+            "id": 3,
+            "title": "Unit 3: Atoms and Molecules",
+            "pdf_path":"data/files/iesc103.pdf",
+            "content_file":"data/files/iesc103.txt"
+        }
+    ]
+    }
+  ]
+}
