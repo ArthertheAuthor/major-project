@@ -1,11 +1,18 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-import json
 from collections import Counter
+import json
+import urllib.parse
+from utils.data_handler import (
+    get_subjects,
+    get_chapter_text,
+    get_questions,
+    load_json
+)
 
 app = FastAPI()
 
-# -------------------- CORS (IMPORTANT) --------------------
+# -------------------- CORS --------------------
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -33,15 +40,6 @@ def get_summary(text):
     sentences = text.split(".")
     return ". ".join(sentences[:2]).strip() + "."
 
-def generate_quiz(text):
-    return [
-        {
-            "question": "What is the main topic?",
-            "options": ["CPU", "Memory", "Disk", "Network"],
-            "answer": "CPU"
-        }
-    ]
-
 def generate_mindmap(text):
     keywords = extract_keywords(text)
 
@@ -65,44 +63,35 @@ def generate_mindmap(text):
         "edges": edges
     }
 
-# -------------------- AUTH APIs --------------------
+# -------------------- AUTH --------------------
 
 @app.post("/register")
 def register(data: dict):
     email = data.get("email")
     password = data.get("password")
-
     users[email] = password
-
     return {"message": "User registered"}
 
 @app.post("/login")
 def login(data: dict):
-    try:
-        email = data.get("email")
-        password = data.get("password")
+    email = data.get("email")
+    password = data.get("password")
 
-        # 🔴 validation
-        if not email or not password:
-            return {"message": "Missing email or password"}
+    if not email or not password:
+        return {"message": "Missing email or password"}
 
-        # 🔴 check user exists
-        if email not in users:
-            return {"message": "User not found"}
+    if email not in users:
+        return {"message": "User not found"}
 
-        # 🔴 check password
-        if users[email] != password:
-            return {"message": "Incorrect password"}
+    if users[email] != password:
+        return {"message": "Incorrect password"}
 
-        return {
-            "message": "Login successful",
-            "user": email.split("@")[0]
-        }
+    return {
+        "message": "Login successful",
+        "user": email.split("@")[0]
+    }
 
-    except Exception as e:
-        return {"error": str(e)}
-
-# -------------------- OPTIONAL ONBOARDING --------------------
+# -------------------- ONBOARDING --------------------
 
 @app.post("/onboarding")
 def onboarding(data: dict):
@@ -110,14 +99,15 @@ def onboarding(data: dict):
 
 # -------------------- CHAPTERS --------------------
 
-from utils.data_handler import get_subjects, get_chapter_text
-
 @app.get("/chapters")
 def get_chapters():
-    subjects = get_subjects()
+    data = load_json("data/chapters.json")
 
+    if isinstance(data, list):
+        return data
+
+    subjects = data.get("subjects", [])
     final = []
-    id_counter = 1
 
     for sub in subjects:
         subject_name = sub["name"].lower()
@@ -127,13 +117,11 @@ def get_chapters():
             content = get_chapter_text(subject_id, ch["id"])
 
             final.append({
-                "id": id_counter,
+                "id": ch["id"],   # ✅ FIXED (IMPORTANT)
                 "subject": subject_name,
                 "title": ch["title"],
                 "content": content[:800]
             })
-
-            id_counter += 1
 
     return final
 
@@ -142,17 +130,53 @@ def get_chapters():
 @app.post("/summary")
 def summary_api(data: dict):
     text = clean_text(data.get("text", ""))
-    return {
-        "summary": get_summary(text)
-    }
+    return {"summary": get_summary(text)}
 
 # -------------------- QUIZ --------------------
 
 @app.post("/quiz")
 def quiz_api(data: dict):
     text = clean_text(data.get("text", ""))
+
+    # ✅ SUBJECT MAPPING
+    subject_map = {
+        "english": "eng",
+        "science": "sci"
+    }
+
+    subject = subject_map.get(data.get("subject", "").lower(), "eng")
+    chapter_id = data.get("chapter_id", 1)
+
+    try:
+        questions = get_questions(subject, chapter_id)
+
+        print("SUBJECT:", subject)
+        print("CHAPTER ID:", chapter_id)
+        print("LOADED QUESTIONS:", questions)
+
+        if questions:
+            return {
+                "quiz": [
+                    {
+                        "question": q.get("question", "No question"),
+                        "options": q.get("options", []),
+                        "answer": q.get("answer", "")
+                    }
+                    for q in questions
+                ]
+            }
+
+    except Exception as e:
+        print("Quiz error:", e)
+
     return {
-        "quiz": generate_quiz(text)
+        "quiz": [
+            {
+                "question": "Fallback Question",
+                "options": ["A", "B", "C", "D"],
+                "answer": "A"
+            }
+        ]
     }
 
 # -------------------- MINDMAP --------------------
@@ -175,3 +199,5 @@ def save_progress(data: dict):
     progress[user].append(score)
 
     return {"status": "saved"}
+
+
