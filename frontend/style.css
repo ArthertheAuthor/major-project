@@ -1,8 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,600;1,600&display=swap');
+
+body {
+    background-color: #e5e5e5; /* Vintage light grey background for the desktop */
+    background-image: radial-gradient(#d4d4d4 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+/* The Hardware Phone Mockup */
+.phone-frame {
+    width: 380px;
+    height: 750px;
+    background: #ffffff;
+    border: 12px solid #111111;
+    border-radius: 40px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 20px 20px 0px #a3a3a3; /* Brutalist sharp shadow */
+    margin: 40px auto;
+}
+
+/* Fake Phone Notch */
+.phone-notch {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 25px;
+    background-color: #111111;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    z-index: 50;
+}
+
+/* Custom Vintage Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f0f0f0; border-left: 1px solid #111; }
+::-webkit-scrollbar-thumb { background: #111; }
+
+/* Black and White Radar Spinner */
 .spinner {
-    width: 40px;
-    height: 40px;
-    border: 4px solid rgba(59, 130, 246, 0.1);
-    border-top: 4px solid #3b82f6;
+    width: 50px;
+    height: 50px;
+    border: 3px solid #e5e5e5;
+    border-top-color: #111111;
     border-radius: 50%;
     animation: spin 1s linear infinite;
 }
@@ -12,4 +53,41 @@
     100% { transform: rotate(360deg); }
 }
 
-button { transition: all 0.2s ease; }
+/* Typography Classes */
+.font-serif-heading { font-family: 'Playfair Display', serif; }
+.font-mono-ui { font-family: 'Space Mono', monospace; }
+
+
+/* The Desktop Mockup */
+.desktop-frame {
+    width: 90vw;
+    max-width: 1100px;
+    height: 85vh;
+    background: #ffffff;
+    border: 12px solid #111111;
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 20px 20px 0px #a3a3a3;
+    margin: 40px auto;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Hide the phone notch when in desktop mode */
+.desktop-frame .phone-notch {
+    display: none;
+}
+
+/* Smooth transition for the phone frame */
+.phone-frame {
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Hide horizontal scrollbar for the chapter list */
+#chapter-list::-webkit-scrollbar {
+    display: none;
+}
+#chapter-list {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}

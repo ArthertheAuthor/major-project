@@ -3,73 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EduAI | Offline Intelligent Learning</title>
+    <title>EduAI | Offline Terminal</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-[#0f172a] text-slate-200 min-h-screen font-sans">
+<body class="min-h-screen flex items-center justify-center font-mono-ui text-[#111]">
 
-    <nav class="border-b border-slate-800 bg-[#1e293b]/80 backdrop-blur-md p-4 sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center font-bold text-white shadow-lg">E</div>
-                <h1 class="text-xl font-bold tracking-tight">Edu<span class="text-blue-500">AI</span></h1>
-                <span class="text-[10px] bg-blue-500/10 text-blue-400 px-2 py-1 rounded border border-blue-400/20 ml-2 font-mono uppercase tracking-tighter">Offline V1</span>
+    <div id="app-frame" class="phone-frame flex flex-col">
+        <div class="phone-notch"></div>
+
+        <header class="pt-10 pb-4 px-5 border-b-2 border-black bg-white flex justify-between items-end shrink-0">
+            <div>
+                <h1 class="text-2xl font-serif-heading font-black tracking-tight leading-none">Edu.AI</h1>
+                <p class="text-[10px] uppercase font-bold tracking-widest mt-1">Offline V1.0</p>
             </div>
-            <div id="user-display" class="text-sm text-slate-400 font-medium italic">Edge Inference Mode</div>
-        </div>
-    </nav>
+            
+            <div class="flex flex-col items-end gap-2 shrink-0">
+                <select id="ram-select" onchange="handleRAMChange()" class="text-[10px] bg-white border border-black px-1 py-0.5 outline-none font-bold cursor-pointer hover:bg-black hover:text-white transition-colors">
+                    <option value="8">8GB RAM</option>
+                    <option value="6">6GB RAM</option>
+                    <option value="4">4GB RAM</option>
+                </select>
+                <button id="network-btn" onclick="toggleNetwork()" class="text-[10px] border border-black px-2 py-0.5 font-bold flex items-center gap-1 hover:bg-gray-100 transition-colors">
+                    <span id="network-dot" class="w-1.5 h-1.5 bg-black rounded-full"></span>
+                    <span id="network-text">OFFLINE</span>
+                </button>
+            </div>
+        </header>
 
-    <div id="screen-auth" class="flex flex-col items-center justify-center pt-24 px-4">
-        <div class="bg-[#1e293b] p-10 rounded-3xl border border-slate-700 shadow-2xl w-full max-w-md">
-            <h2 class="text-3xl font-bold text-white mb-2 text-center text-white">Neural Access</h2>
-            <p class="text-slate-400 text-center mb-8 text-sm">Initialize your local offline session.</p>
+        <div id="screen-auth" class="flex-1 flex flex-col p-6 justify-center bg-white">
+            <h2 class="text-3xl font-serif-heading font-black mb-2 border-b-2 border-black pb-2">Login.</h2>
+            <p class="text-xs mb-8 font-bold text-gray-500">ACCESS LOCAL NEURAL ENGINE.</p>
             
             <div class="space-y-4">
-                <input id="auth-email" type="email" placeholder="Email" class="w-full p-4 rounded-2xl bg-slate-900 border border-slate-700 focus:border-blue-500 outline-none transition-all text-white">
-                <input id="auth-pass" type="password" placeholder="Password" class="w-full p-4 rounded-2xl bg-slate-900 border border-slate-700 focus:border-blue-500 outline-none transition-all text-white">
+                <input id="auth-email" type="email" placeholder="Student ID" class="w-full p-3 border-2 border-black bg-white outline-none focus:bg-gray-100 text-sm font-bold">
+                <input id="auth-pass" type="password" placeholder="Passcode" class="w-full p-3 border-2 border-black bg-white outline-none focus:bg-gray-100 text-sm font-bold">
                 
-                <div class="pt-4 space-y-3">
-                    <button onclick="handleAuth('login')" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 rounded-2xl transition-all active:scale-95 shadow-lg shadow-blue-600/20">Login</button>
-                    <button onclick="handleAuth('register')" class="w-full bg-transparent border border-slate-700 hover:bg-slate-800 text-slate-400 py-3 rounded-2xl text-sm transition-all">Register New Account</button>
-                </div>
+                <button onclick="handleAuth('login')" class="w-full bg-black text-white font-bold py-3 uppercase tracking-widest text-sm hover:bg-white hover:text-black border-2 border-black transition-colors cursor-pointer">Authenticate</button>
             </div>
+        </div>
+
+        <div id="screen-dashboard" class="hidden flex-1 flex flex-col overflow-hidden bg-white">
+            
+            <div class="border-b-2 border-black bg-gray-100 p-3 overflow-x-auto whitespace-nowrap shrink-0" id="chapter-list">
+                </div>
+
+            <main class="flex-1 overflow-y-auto relative p-5">
+                
+                <div id="ai-loader" class="hidden absolute inset-0 bg-white/95 z-50 flex flex-col items-center justify-center border-t border-black">
+                    <div class="spinner mb-4"></div>
+                    <p id="loader-text" class="text-xs uppercase font-bold tracking-widest text-center px-4">Processing...</p>
+                </div>
+
+                <div id="view-empty" class="h-full flex flex-col items-center justify-center text-center opacity-40">
+                    <span class="text-4xl mb-4">📖</span>
+                    <p class="text-xs uppercase font-bold tracking-widest">Select a chapter<br>to begin.</p>
+                </div>
+
+                <div id="view-main" class="hidden">
+                    <h2 id="chapter-title" class="text-xl font-serif-heading font-black mb-4 leading-tight"></h2>
+                    
+                    <div class="grid grid-cols-3 gap-2 mb-6 pb-6 border-b-2 border-black border-dashed">
+                        <button onclick="fetchSummary()" class="border-2 border-black py-2 text-[10px] font-bold uppercase hover:bg-black hover:text-white transition-colors cursor-pointer">Summary</button>
+                        <button id="btn-mindmap" onclick="fetchMindmap()" class="border-2 border-black py-2 text-[10px] font-bold uppercase hover:bg-black hover:text-white transition-colors disabled:opacity-20 disabled:cursor-not-allowed group relative cursor-pointer">
+                            Mindmap
+                            <span class="hidden group-disabled:block absolute -bottom-8 left-1/2 -translate-x-1/2 bg-black text-white text-[8px] p-1 whitespace-nowrap z-10">6GB RAM Req.</span>
+                        </button>
+                        <button onclick="fetchQuiz()" class="border-2 border-black py-2 text-[10px] font-bold uppercase hover:bg-black hover:text-white transition-colors cursor-pointer">Quiz</button>
+                    </div>
+
+                    <div id="ai-content-box" class="text-sm leading-relaxed pb-10"></div>
+                </div>
+            </main>
         </div>
     </div>
 
-    <div id="screen-dashboard" class="hidden max-w-7xl mx-auto grid grid-cols-12 gap-6 p-6">
-        <aside class="col-span-12 lg:col-span-3">
-            <div class="bg-[#1e293b] rounded-2xl border border-slate-700 p-5 sticky top-24">
-                <h3 class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-4">Offline Modules</h3>
-                <div id="chapter-list" class="space-y-2"></div>
-            </div>
-        </aside>
-
-        <main class="col-span-12 lg:col-span-9 bg-[#1e293b] rounded-2xl border border-slate-700 min-h-[600px] relative overflow-hidden">
-            <div id="ai-loader" class="hidden absolute inset-0 bg-[#0f172a]/95 backdrop-blur-sm z-50 flex flex-col items-center justify-center">
-                <div class="spinner mb-4"></div>
-                <p id="loader-text" class="text-blue-400 font-mono text-sm animate-pulse uppercase tracking-widest">Processing...</p>
-            </div>
-
-            <div id="view-empty" class="h-full flex flex-col items-center justify-center p-12 text-center">
-                <div class="text-6xl mb-6 opacity-20">🧠</div>
-                <h2 class="text-2xl font-bold text-white">Ready for Analysis</h2>
-                <p class="text-slate-500 mt-2">Select a chapter from the sidebar to begin local AI processing.</p>
-            </div>
-
-            <div id="view-main" class="hidden p-8">
-                <div class="flex flex-col md:flex-row justify-between items-center mb-8 pb-6 border-b border-slate-800">
-                    <h2 id="chapter-title" class="text-3xl font-bold text-white"></h2>
-                    <div class="flex gap-2">
-                        <button onclick="fetchSummary()" class="bg-slate-800 hover:bg-blue-600 px-4 py-2 rounded-xl text-sm font-semibold border border-slate-700 transition-all">✨ Summary</button>
-                        <button onclick="fetchMindmap()" class="bg-slate-800 hover:bg-purple-600 px-4 py-2 rounded-xl text-sm font-semibold border border-slate-700 transition-all">🧠 Mindmap</button>
-                        <button onclick="fetchQuiz()" class="bg-slate-800 hover:bg-emerald-600 px-4 py-2 rounded-xl text-sm font-semibold border border-slate-700 transition-all">📝 Quiz</button>
-                    </div>
-                </div>
-                <div id="ai-content-box" class="bg-slate-900/50 rounded-2xl p-6 border border-slate-800 min-h-[400px]"></div>
-            </div>
-        </main>
+    <div class="fixed bottom-6 right-6 z-[100]">
+        <button onclick="toggleDevice()" class="bg-black text-white px-5 py-3 font-bold text-[10px] uppercase tracking-widest border-2 border-black hover:bg-white hover:text-black transition-colors shadow-[6px_6px_0px_rgba(0,0,0,0.2)] active:translate-y-1 active:shadow-[2px_2px_0px_rgba(0,0,0,0.2)] cursor-pointer">
+            🖥️ / 📱 Toggle View
+        </button>
     </div>
 
     <script src="app.js"></script>
