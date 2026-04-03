@@ -7,6 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
 </head>
 <body class="min-h-screen flex items-center justify-center font-mono-ui text-[#111]">
 
@@ -64,14 +65,16 @@
                 <div id="view-main" class="hidden">
                     <h2 id="chapter-title" class="text-xl font-serif-heading font-black mb-4 leading-tight"></h2>
                     
-                    <div class="grid grid-cols-3 gap-2 mb-6 pb-6 border-b-2 border-black border-dashed">
-                        <button onclick="fetchSummary()" class="border-2 border-black py-2 text-[10px] font-bold uppercase hover:bg-black hover:text-white transition-colors cursor-pointer">Summary</button>
-                        <button id="btn-mindmap" onclick="fetchMindmap()" class="border-2 border-black py-2 text-[10px] font-bold uppercase hover:bg-black hover:text-white transition-colors disabled:opacity-20 disabled:cursor-not-allowed group relative cursor-pointer">
-                            Mindmap
-                            <span class="hidden group-disabled:block absolute -bottom-8 left-1/2 -translate-x-1/2 bg-black text-white text-[8px] p-1 whitespace-nowrap z-10">6GB RAM Req.</span>
-                        </button>
-                        <button onclick="fetchQuiz()" class="border-2 border-black py-2 text-[10px] font-bold uppercase hover:bg-black hover:text-white transition-colors cursor-pointer">Quiz</button>
-                    </div>
+                    <div class="grid grid-cols-4 gap-2 mb-6 pb-6 border-b-2 border-black border-dashed">
+                    <button onclick="fetchSummary()" class="border-2 border-black py-2 text-[8px] font-bold uppercase hover:bg-black hover:text-white transition-colors cursor-pointer">Summary</button>
+                    <button id="btn-mindmap" onclick="fetchMindmap()" class="border-2 border-black py-2 text-[8px] font-bold uppercase hover:bg-black hover:text-white transition-colors disabled:opacity-20 cursor-pointer">Mindmap</button>
+                    <button id="btn-flashcards" onclick="fetchFlashcards()" class="border-2 border-black py-2 text-[8px] font-bold uppercase hover:bg-black hover:text-white transition-colors disabled:opacity-20 group relative cursor-pointer">
+                         Cards
+                   <span class="hidden group-disabled:block absolute -bottom-8 left-1/2 -translate-x-1/2 bg-black text-white text-[8px] p-1 whitespace-nowrap z-10">8GB RAM Req.</span>
+                 </button>
+                <button onclick="fetchQuiz()" class="border-2 border-black py-2 text-[8px] font-bold uppercase hover:bg-black hover:text-white transition-colors cursor-pointer">Quiz</button>
+</div>
+                    
 
                     <div id="ai-content-box" class="text-sm leading-relaxed pb-10"></div>
                 </div>
