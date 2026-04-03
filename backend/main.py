@@ -110,7 +110,7 @@ def onboarding(data: dict):
 
 # -------------------- CHAPTERS --------------------
 
-from data_handler import get_subjects, get_chapter_text
+from utils.data_handler import get_subjects, get_chapter_text
 
 @app.get("/chapters")
 def get_chapters():
