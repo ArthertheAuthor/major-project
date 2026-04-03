@@ -7,9 +7,19 @@
                 "answer": "Occupies space and has mass"
             },
             {
+                "question": "Which of the following is NOT matter?",
+                "options": ["Air", "Water", "Love", "Stone"],
+                "answer": "Love"
+            },
+            {
                 "question": "Particles of matter have:",
                 "options": ["No space", "Space between them", "Infinite mass", "No movement"],
                 "answer": "Space between them"
+            },
+            {
+                "question": "Diffusion is fastest in:",
+                "options": ["Solids", "Liquids", "Gases", "Plasma"],
+                "answer": "Gases"
             },
             {
                 "question": "Evaporation causes:",
@@ -17,9 +27,208 @@
                 "answer": "Cooling"
             },
             {
-                "question": "Force of attraction is maximum in:",
+                "question": "Ice floats on water because:",
+                "options": ["It is heavier", "It is less dense", "It is hotter", "It is solid"],
+                "answer": "It is less dense"
+            },
+            {
+                "question": "Kinetic energy of particles is highest in:",
                 "options": ["Solids", "Liquids", "Gases", "Plasma"],
-                "answer": "Solids"
+                "answer": "Gases"
+            },
+            {
+                "question": "The process of a solid changing directly into a gas is called:",
+                "options": ["Evaporation", "Condensation", "Sublimation", "Melting"],
+                "answer": "Sublimation"
+            },
+            {
+                "question": "Which of the following has the strongest intermolecular forces?",
+                "options": ["Water", "Oxygen", "Iron", "Honey"],
+                "answer": "Iron"
+            },
+            {
+                "question": "The SI unit of temperature is:",
+                "options": ["Celsius", "Fahrenheit", "Kelvin", "Pascal"],
+                "answer": "Kelvin"
+            },
+            {
+                "question": "The boiling point of water on the Kelvin scale is:",
+                "options": ["273 K", "373 K", "100 K", "0 K"],
+                "answer": "373 K"
+            },
+            {
+                "question": "Dry ice is solid:",
+                "options": ["Carbon dioxide", "Oxygen", "Nitrogen", "Water"],
+                "answer": "Carbon dioxide"
+            },
+            {
+                "question": "The state of matter with definite volume but no definite shape is:",
+                "options": ["Solid", "Liquid", "Gas", "Plasma"],
+                "answer": "Liquid"
+            },
+            {
+                "question": "During summer, water kept in an earthen pot becomes cool because of:",
+                "options": ["Diffusion", "Transpiration", "Osmosis", "Evaporation"],
+                "answer": "Evaporation"
+            },
+            {
+                "question": "Gases can be liquefied by:",
+                "options": ["Increasing pressure and decreasing temperature", "Decreasing pressure and increasing temperature", "Increasing both", "Decreasing both"],
+                "answer": "Increasing pressure and decreasing temperature"
+            }
+        ],
+        "2": [
+            {
+                "question": "A pure substance consists of:",
+                "options": ["A single type of particles", "Two types of particles", "Mixtures of compounds", "Impure elements"],
+                "answer": "A single type of particles"
+            },
+            {
+                "question": "Which of the following is a heterogeneous mixture?",
+                "options": ["Salt in water", "Sugar in water", "Soil and water", "Air"],
+                "answer": "Soil and water"
+            },
+            {
+                "question": "The Tyndall effect is shown by:",
+                "options": ["True solutions", "Colloids", "Suspensions", "Pure solvents"],
+                "answer": "Colloids"
+            },
+            {
+                "question": "Which method is used to separate colors in a dye?",
+                "options": ["Filtration", "Evaporation", "Chromatography", "Distillation"],
+                "answer": "Chromatography"
+            },
+            {
+                "question": "Brass is an example of a:",
+                "options": ["Compound", "Mixture", "Element", "Solution"],
+                "answer": "Mixture"
+            },
+            {
+                "question": "Tincture of iodine has iodine as the solute and ___ as the solvent.",
+                "options": ["Water", "Alcohol", "Ether", "Benzene"],
+                "answer": "Alcohol"
+            },
+            {
+                "question": "Which of the following is an aerosol?",
+                "options": ["Fog", "Cheese", "Sponge", "Butter"],
+                "answer": "Fog"
+            },
+            {
+                "question": "Two miscible liquids with a boiling point difference of less than 25K are separated by:",
+                "options": ["Simple distillation", "Fractional distillation", "Chromatography", "Sublimation"],
+                "answer": "Fractional distillation"
+            },
+            {
+                "question": "Blood is separated into its components by:",
+                "options": ["Evaporation", "Centrifugation", "Filtration", "Decantation"],
+                "answer": "Centrifugation"
+            },
+            {
+                "question": "Which of the following is a physical change?",
+                "options": ["Rusting of iron", "Burning of wood", "Melting of ice", "Digestion of food"],
+                "answer": "Melting of ice"
+            },
+            {
+                "question": "A pure substance which is made up of only one kind of atom is called:",
+                "options": ["Compound", "Mixture", "Element", "Solution"],
+                "answer": "Element"
+            },
+            {
+                "question": "Which of the following is a metalloid?",
+                "options": ["Sodium", "Silicon", "Sulphur", "Silver"],
+                "answer": "Silicon"
+            },
+            {
+                "question": "The dispersed phase in milk is:",
+                "options": ["Solid", "Liquid", "Gas", "Plasma"],
+                "answer": "Liquid"
+            },
+            {
+                "question": "Water can be separated from a salt solution by:",
+                "options": ["Filtration", "Evaporation", "Decantation", "Sublimation"],
+                "answer": "Evaporation"
+            },
+            {
+                "question": "A mixture of iron filings and sulphur powder can be separated by:",
+                "options": ["Water", "Carbon disulphide", "A Magnet", "Both a Magnet and Carbon disulphide"],
+                "answer": "Both a Magnet and Carbon disulphide"
+            }
+        ],
+        "3": [
+            {
+                "question": "Who proposed the law of conservation of mass?",
+                "options": ["John Dalton", "Antoine Lavoisier", "Joseph Proust", "Democritus"],
+                "answer": "Antoine Lavoisier"
+            },
+            {
+                "question": "The atomic mass unit (u) is defined as exactly 1/12th the mass of one atom of:",
+                "options": ["Oxygen-16", "Carbon-12", "Hydrogen-1", "Nitrogen-14"],
+                "answer": "Carbon-12"
+            },
+            {
+                "question": "What is the atomicity of ozone (O3)?",
+                "options": ["Monoatomic", "Diatomic", "Triatomic", "Polyatomic"],
+                "answer": "Triatomic"
+            },
+            {
+                "question": "A negatively charged ion is called an:",
+                "options": ["Isotope", "Cation", "Anion", "Molecule"],
+                "answer": "Anion"
+            },
+            {
+                "question": "The chemical formula for water represents that it contains:",
+                "options": ["2 Hydrogen, 1 Oxygen", "1 Hydrogen, 2 Oxygen", "2 Hydrogen, 2 Oxygen", "1 Hydrogen, 1 Oxygen"],
+                "answer": "2 Hydrogen, 1 Oxygen"
+            },
+            {
+                "question": "The chemical symbol for Potassium is:",
+                "options": ["P", "Po", "K", "Pt"],
+                "answer": "K"
+            },
+            {
+                "question": "The valency of oxygen is:",
+                "options": ["1", "2", "3", "4"],
+                "answer": "2"
+            },
+            {
+                "question": "The formula of Aluminium chloride is:",
+                "options": ["AlCl", "AlCl2", "AlCl3", "Al2Cl3"],
+                "answer": "AlCl3"
+            },
+            {
+                "question": "What is the molecular mass of Nitric Acid (HNO3)?",
+                "options": ["63 u", "62 u", "64 u", "61 u"],
+                "answer": "63 u"
+            },
+            {
+                "question": "Which postulate of Dalton's theory is the result of the law of conservation of mass?",
+                "options": ["Atoms of different elements have different masses", "Atoms are indivisible particles which cannot be created or destroyed", "Atoms combine in ratio of small whole numbers", "Matter consists of indivisible atoms"],
+                "answer": "Atoms are indivisible particles which cannot be created or destroyed"
+            },
+            {
+                "question": "A group of atoms carrying a charge is known as a:",
+                "options": ["Molecule", "Polyatomic ion", "Element", "Compound"],
+                "answer": "Polyatomic ion"
+            },
+            {
+                "question": "The symbol for the element Lead is:",
+                "options": ["Le", "Ld", "Pb", "Pl"],
+                "answer": "Pb"
+            },
+            {
+                "question": "The ratio by mass of Carbon and Oxygen in CO2 is:",
+                "options": ["3:8", "3:4", "1:2", "12:16"],
+                "answer": "3:8"
+            },
+            {
+                "question": "Avogadro's constant has the value of:",
+                "options": ["6.022 x 10^22", "6.022 x 10^23", "6.022 x 10^24", "6.022 x 10^21"],
+                "answer": "6.022 x 10^23"
+            },
+            {
+                "question": "The mass of 1 mole of nitrogen gas (N2) is:",
+                "options": ["14 g", "28 u", "28 g", "14 u"],
+                "answer": "28 g"
             }
         ]
     },
@@ -44,6 +253,215 @@
                 "question": "What does the road symbolize in the poem?",
                 "options": ["Nature", "Life choices", "Travel", "Adventure"],
                 "answer": "Life choices"
+            },
+            {
+                "question": "Why couldn't the traveler take both roads?",
+                "options": ["They were dangerous", "He was one traveler", "They were closed", "They were too long"],
+                "answer": "He was one traveler"
+            },
+            {
+                "question": "What year is the story 'The Fun They Had' set in?",
+                "options": ["2057", "2157", "2257", "2024"],
+                "answer": "2157"
+            },
+            {
+                "question": "Who was the County Inspector?",
+                "options": ["Margie's father", "A little round man with a red face", "Tommy's teacher", "The school principal"],
+                "answer": "A little round man with a red face"
+            },
+            {
+                "question": "Margie was failing in which subject?",
+                "options": ["History", "Geography", "Science", "Mathematics"],
+                "answer": "Geography"
+            },
+            {
+                "question": "How many hours a day did Margie and Tommy study?",
+                "options": ["Regular school hours", "Just when they felt like it", "Always at the same time every day except weekends", "Only at night"],
+                "answer": "Always at the same time every day except weekends"
+            },
+            {
+                "question": "What did the County Inspector give to Margie?",
+                "options": ["An apple", "A book", "A pen", "A piece of chocolate"],
+                "answer": "An apple"
+            },
+            {
+                "question": "In 'The Road Not Taken', the 'yellow wood' refers to:",
+                "options": ["A forest painted yellow", "Autumn season", "Spring season", "A field of flowers"],
+                "answer": "Autumn season"
+            },
+            {
+                "question": "The poet stood at the intersection for a long time because:",
+                "options": ["He was waiting for someone", "He was confused about which road to take", "He was tired", "It was raining"],
+                "answer": "He was confused about which road to take"
+            },
+            {
+                "question": "The second road was:",
+                "options": ["Grassy and wanted wear", "Muddy and wet", "Full of stones", "A highway"],
+                "answer": "Grassy and wanted wear"
+            },
+            {
+                "question": "By saying 'way leads on to way', the poet means:",
+                "options": ["You can always go back", "Life brings new choices from old ones", "Roads are confusing", "Travel is tiring"],
+                "answer": "Life brings new choices from old ones"
+            },
+            {
+                "question": "The poet took the road that was:",
+                "options": ["Less traveled by", "Most traveled by", "Blocked", "Unpaved"],
+                "answer": "Less traveled by"
+            }
+        ],
+        "2": [
+            {
+                "question": "At what age did Evelyn Glennie's deafness first get noticed?",
+                "options": ["Eight years old", "Eleven years old", "Five years old", "Fifteen years old"],
+                "answer": "Eight years old"
+            },
+            {
+                "question": "How did Evelyn learn to sense music?",
+                "options": ["Through a hearing aid", "By reading lips", "Through vibrations in her body", "By watching hand signals"],
+                "answer": "Through vibrations in her body"
+            },
+            {
+                "question": "Bismillah Khan was famous for playing which instrument?",
+                "options": ["Sitar", "Tabla", "Flute", "Shehnai"],
+                "answer": "Shehnai"
+            },
+            {
+                "question": "In the poem 'Wind', what does the wind symbolize?",
+                "options": ["Joy and happiness", "Destruction and life's challenges", "Peace and calm", "A long journey"],
+                "answer": "Destruction and life's challenges"
+            },
+            {
+                "question": "What does the poet advise us to do to face the wind?",
+                "options": ["Build strong homes and bodies", "Hide in the basement", "Run away", "Cry for help"],
+                "answer": "Build strong homes and bodies"
+            },
+            {
+                "question": "Evelyn Glennie is Scottish and went to the Royal Academy of Music in:",
+                "options": ["Paris", "New York", "London", "Berlin"],
+                "answer": "London"
+            },
+            {
+                "question": "Who spotted Evelyn's potential?",
+                "options": ["Her mother", "Ron Forbes", "The headmistress", "Her father"],
+                "answer": "Ron Forbes"
+            },
+            {
+                "question": "Evelyn performs barefoot on a wooden platform so that:",
+                "options": ["She can dance", "The vibrations pass through her bare feet", "It is a tradition", "It looks better"],
+                "answer": "The vibrations pass through her bare feet"
+            },
+            {
+                "question": "Bismillah Khan's maternal uncle was:",
+                "options": ["Ali Bux", "Rasool Bux Khan", "Paigambar Bux", "Aurangzeb"],
+                "answer": "Ali Bux"
+            },
+            {
+                "question": "The pungi was banned by Emperor:",
+                "options": ["Akbar", "Babur", "Shah Jahan", "Jahangir"],
+                "answer": "Akbar"
+            },
+            {
+                "question": "On 15 August 1947, Bismillah Khan played the Shehnai from:",
+                "options": ["The Taj Mahal", "The Red Fort", "India Gate", "Parliament House"],
+                "answer": "The Red Fort"
+            },
+            {
+                "question": "In the poem 'Wind', the poet tells the wind not to scatter the:",
+                "options": ["Leaves", "Papers", "Books", "Seeds"],
+                "answer": "Papers"
+            },
+            {
+                "question": "The wind god winnows and:",
+                "options": ["Crushes them all", "Saves the weak", "Blows them away", "Waters them"],
+                "answer": "Crushes them all"
+            },
+            {
+                "question": "According to the poet, who makes friends with the wind?",
+                "options": ["The weak", "The strong", "The cowardly", "The foolish"],
+                "answer": "The strong"
+            },
+            {
+                "question": "The phrase 'make the heart steadfast' means:",
+                "options": ["To be stubborn", "To be physically fit", "To be mentally strong", "To be angry"],
+                "answer": "To be mentally strong"
+            }
+        ],
+        "3": [
+            {
+                "question": "Why was Kezia afraid of her father?",
+                "options": ["He was very strict and big", "He used to hit her daily", "He never spoke to her", "He looked like a monster"],
+                "answer": "He was very strict and big"
+            },
+            {
+                "question": "What did Kezia make for her father's birthday?",
+                "options": ["A drawing", "A pin-cushion", "A cake", "A paper boat"],
+                "answer": "A pin-cushion"
+            },
+            {
+                "question": "What mistake did Kezia make while preparing the gift?",
+                "options": ["She used her mother's dress", "She tore up her father's important speech", "She spilled ink on the table", "She broke his favorite pen"],
+                "answer": "She tore up her father's important speech"
+            },
+            {
+                "question": "In 'Rain on the Roof', what does the poet love to do when it rains?",
+                "options": ["Dance in the rain", "Lie in bed pressing his pillow", "Read a scary book", "Write letters to friends"],
+                "answer": "Lie in bed pressing his pillow"
+            },
+            {
+                "question": "What memory does the rain bring back to the poet?",
+                "options": ["His childhood friends", "His school days", "The memory of his mother", "His favorite pet"],
+                "answer": "The memory of his mother"
+            },
+            {
+                "question": "Kezia's father used to give her a:",
+                "options": ["Casual kiss", "Tight hug", "Candy", "Storybook"],
+                "answer": "Casual kiss"
+            },
+            {
+                "question": "To Kezia, her father appeared as giant as a:",
+                "options": ["Monster", "Giant", "Bear", "Mountain"],
+                "answer": "Giant"
+            },
+            {
+                "question": "The Macdonalds next door had how many children?",
+                "options": ["Three", "Four", "Five", "Six"],
+                "answer": "Five"
+            },
+            {
+                "question": "Kezia made the pin-cushion out of:",
+                "options": ["Red silk", "Yellow silk", "Pink cotton", "Blue velvet"],
+                "answer": "Yellow silk"
+            },
+            {
+                "question": "When Kezia had a nightmare, she saw a butcher with a:",
+                "options": ["Knife and a rope", "Knife and a smile", "Knife and a mask", "Knife and a gun"],
+                "answer": "Knife and a rope"
+            },
+            {
+                "question": "'Rain on the Roof' describes the poet's feelings when he hears the patter of rain on the:",
+                "options": ["Window", "Shingles", "Floor", "Trees"],
+                "answer": "Shingles"
+            },
+            {
+                "question": "The 'starry spheres' refer to:",
+                "options": ["The night sky filled with stars", "Raindrops", "Clouds", "Streetlights"],
+                "answer": "The night sky filled with stars"
+            },
+            {
+                "question": "The poet listens to the patter of the rain while pressing his head against a:",
+                "options": ["Wall", "Pillow", "Table", "Book"],
+                "answer": "Pillow"
+            },
+            {
+                "question": "'Darling dreamers' refers to:",
+                "options": ["The poet's siblings", "The poet and his siblings sleeping", "Children dreaming about rain", "The clouds"],
+                "answer": "The poet and his siblings sleeping"
+            },
+            {
+                "question": "The memory that comes to the poet's mind is of his:",
+                "options": ["Father", "Mother", "Brother", "Sister"],
+                "answer": "Mother"
             }
         ]
     }
