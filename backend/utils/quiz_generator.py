@@ -4,6 +4,8 @@ def generate_quiz(text, focus=None):
 
     keyword = focus if focus else (words[0] if words else "Concept")
 
+    
+
     return [
         {
             "question": f"What is {keyword}?",
