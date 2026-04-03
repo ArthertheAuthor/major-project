@@ -110,32 +110,27 @@ def onboarding(data: dict):
 
 # -------------------- CHAPTERS --------------------
 
+from data_handler import get_subjects, get_chapter_text
+
 @app.get("/chapters")
 def get_chapters():
-    with open("data/chapters.json") as f:
-        raw = json.load(f)
+    subjects = get_subjects()
 
     final = []
     id_counter = 1
 
-    for subject in raw["subjects"]:
-        subject_name = subject["name"].lower()
+    for sub in subjects:
+        subject_name = sub["name"].lower()
+        subject_id = sub["id"]
 
-        for ch in subject["chapters"]:
-            content = ""
-
-            #  read content from file
-            try:
-                with open(ch["content_file"], "r", encoding="utf-8") as cf:
-                    content = cf.read()
-            except:
-                content = "Content not available."
+        for ch in sub["chapters"]:
+            content = get_chapter_text(subject_id, ch["id"])
 
             final.append({
                 "id": id_counter,
                 "subject": subject_name,
                 "title": ch["title"],
-                "content": content[:800]  # limit size 
+                "content": content[:800]
             })
 
             id_counter += 1
