@@ -1,1107 +1,1388 @@
 {
-  "subjects": [
-    {
-      "subject": "Science",
-      "chapters": [
+    "subjects": [
         {
-          "chapter": "Matter in Our Surroundings",
-          "mcqs": [ {
-      "question": "Matter is anything that:",
-      "options": {
-        "a": "Has no mass",
-        "b": "Occupies space and has mass",
-        "c": "Is invisible",
-        "d": "Is liquid only"
-      },
-      "answer": "b"
-    },
-    {
-      "question": "Which of the following is NOT matter?",
-      "options": {
-        "a": "Air",
-        "b": "Water",
-        "c": "Love",
-        "d": "Stone"
-      },
-      "answer": "c"
-    },
-    {
-      "question": "Particles of matter are:",
-      "options": {
-        "a": "Very large",
-        "b": "Very small",
-        "c": "Invisible always",
-        "d": "Fixed"
-      },
-      "answer": "b"
-    },
-    {
-      "question": "Particles of matter have:",
-      "options": {
-        "a": "No space",
-        "b": "Space between them",
-        "c": "Infinite mass",
-        "d": "No movement"
-      },
-      "answer": "b"
-    },
-    {
-      "question": "Diffusion is:",
-      "options": {
-        "a": "Mixing on heating",
-        "b": "Mixing on cooling",
-        "c": "Intermixing of particles",
-        "d": "Separation of particles"
-      },
-      "answer": "c"
-    },
-    {
-      "question": "Diffusion is fastest in:",
-      "options": {
-        "a": "Solids",
-        "b": "Liquids",
-        "c": "Gases",
-        "d": "Plasma"
-      },
-      "answer": "c"
-    },
-    {
-      "question": "Particles move faster when:",
-      "options": {
-        "a": "Temperature decreases",
-        "b": "Temperature increases",
-        "c": "Pressure decreases",
-        "d": "Volume decreases"
-      },
-      "answer": "b"
-    },
-    {
-      "question": "Force of attraction is maximum in:",
-      "options": {
-        "a": "Solids",
-        "b": "Liquids",
-        "c": "Gases",
-        "d": "Plasma"
-      },
-      "answer": "a"
-    },
-    {
-      "question": "Liquids have:",
-      "options": {
-        "a": "Fixed shape",
-        "b": "Fixed volume",
-        "c": "No volume",
-        "d": "No mass"
-      },
-      "answer": "b"
-    },
-    {
-      "question": "Gases are:",
-      "options": {
-        "a": "Highly compressible",
-        "b": "Rigid",
-        "c": "Fixed shape",
-        "d": "Fixed volume"
-      },
-      "answer": "a"
-    },
-    {
-      "question": "Melting point is the temperature at which:",
-      "options": {
-        "a": "Liquid becomes gas",
-        "b": "Solid becomes liquid",
-        "c": "Gas becomes liquid",
-        "d": "Liquid becomes solid"
-      },
-      "answer": "b"
-    },
-    {
-      "question": "Boiling point is the temperature at which:",
-      "options": {
-        "a": "Liquid becomes gas",
-        "b": "Solid becomes gas",
-        "c": "Gas becomes solid",
-        "d": "Solid becomes liquid"
-      },
-      "answer": "a"
-    },
-    {
-      "question": "Latent heat is:",
-      "options": {
-        "a": "Visible heat",
-        "b": "Hidden heat",
-        "c": "Cold energy",
-        "d": "External heat"
-      },
-      "answer": "b"
-    },
-    {
-      "question": "Sublimation is:",
-      "options": {
-        "a": "Solid to liquid",
-        "b": "Liquid to gas",
-        "c": "Solid to gas",
-        "d": "Gas to liquid"
-      },
-      "answer": "c"
-    },
-    {
-      "question": "Evaporation occurs at:",
-      "options": {
-        "a": "Boiling point only",
-        "b": "Any temperature",
-        "c": "Freezing point",
-        "d": "Melting point"
-      },
-      "answer": "b"
-    },
-    {
-      "question": "Evaporation causes:",
-      "options": {
-        "a": "Heating",
-        "b": "Cooling",
-        "c": "Freezing",
-        "d": "Boiling"
-      },
-      "answer": "b"
-    },
-    {
-      "question": "Rate of evaporation increases with:",
-      "options": {
-        "a": "Humidity",
-        "b": "Temperature",
-        "c": "Pressure",
-        "d": "Volume"
-      },
-      "answer": "b"
-    },
-    {
-      "question": "Humidity affects evaporation by:",
-      "options": {
-        "a": "Increasing it",
-        "b": "Decreasing it",
-        "c": "No effect",
-        "d": "Stopping it"
-      },
-      "answer": "b"
-    },
-    {
-      "question": "Wind speed:",
-      "options": {
-        "a": "Decreases evaporation",
-        "b": "Increases evaporation",
-        "c": "No effect",
-        "d": "Stops evaporation"
-      },
-      "answer": "b"
-    },
-    {
-      "question": "Ice floats on water because:",
-      "options": {
-        "a": "It is heavier",
-        "b": "It is less dense",
-        "c": "It is hotter",
-        "d": "It is solid"
-      },
-      "answer": "b"
-    } ]
+            "subject": "Science",
+            "chapters": [
+                {
+                    "chapter": "Matter in Our Surroundings",
+                    "mcqs": [
+                        {
+                            "question": "Matter is anything that:",
+                            "options": {
+                                "a": "Has no mass",
+                                "b": "Occupies space and has mass",
+                                "c": "Is invisible",
+                                "d": "Is liquid only"
+                            },
+                            "answer": "b"
+                        },
+                        {
+                            "question": "Which of the following is NOT matter?",
+                            "options": {
+                                "a": "Air",
+                                "b": "Water",
+                                "c": "Love",
+                                "d": "Stone"
+                            },
+                            "answer": "c"
+                        },
+                        {
+                            "question": "Particles of matter are:",
+                            "options": {
+                                "a": "Very large",
+                                "b": "Very small",
+                                "c": "Invisible always",
+                                "d": "Fixed"
+                            },
+                            "answer": "b"
+                        },
+                        {
+                            "question": "Particles of matter have:",
+                            "options": {
+                                "a": "No space",
+                                "b": "Space between them",
+                                "c": "Infinite mass",
+                                "d": "No movement"
+                            },
+                            "answer": "b"
+                        },
+                        {
+                            "question": "Diffusion is:",
+                            "options": {
+                                "a": "Mixing on heating",
+                                "b": "Mixing on cooling",
+                                "c": "Intermixing of particles",
+                                "d": "Separation of particles"
+                            },
+                            "answer": "c"
+                        },
+                        {
+                            "question": "Diffusion is fastest in:",
+                            "options": {
+                                "a": "Solids",
+                                "b": "Liquids",
+                                "c": "Gases",
+                                "d": "Plasma"
+                            },
+                            "answer": "c"
+                        },
+                        {
+                            "question": "Particles move faster when:",
+                            "options": {
+                                "a": "Temperature decreases",
+                                "b": "Temperature increases",
+                                "c": "Pressure decreases",
+                                "d": "Volume decreases"
+                            },
+                            "answer": "b"
+                        },
+                        {
+                            "question": "Force of attraction is maximum in:",
+                            "options": {
+                                "a": "Solids",
+                                "b": "Liquids",
+                                "c": "Gases",
+                                "d": "Plasma"
+                            },
+                            "answer": "a"
+                        },
+                        {
+                            "question": "Liquids have:",
+                            "options": {
+                                "a": "Fixed shape",
+                                "b": "Fixed volume",
+                                "c": "No volume",
+                                "d": "No mass"
+                            },
+                            "answer": "b"
+                        },
+                        {
+                            "question": "Gases are:",
+                            "options": {
+                                "a": "Highly compressible",
+                                "b": "Rigid",
+                                "c": "Fixed shape",
+                                "d": "Fixed volume"
+                            },
+                            "answer": "a"
+                        },
+                        {
+                            "question": "Melting point is the temperature at which:",
+                            "options": {
+                                "a": "Liquid becomes gas",
+                                "b": "Solid becomes liquid",
+                                "c": "Gas becomes liquid",
+                                "d": "Liquid becomes solid"
+                            },
+                            "answer": "b"
+                        },
+                        {
+                            "question": "Boiling point is the temperature at which:",
+                            "options": {
+                                "a": "Liquid becomes gas",
+                                "b": "Solid becomes gas",
+                                "c": "Gas becomes solid",
+                                "d": "Solid becomes liquid"
+                            },
+                            "answer": "a"
+                        },
+                        {
+                            "question": "Latent heat is:",
+                            "options": {
+                                "a": "Visible heat",
+                                "b": "Hidden heat",
+                                "c": "Cold energy",
+                                "d": "External heat"
+                            },
+                            "answer": "b"
+                        },
+                        {
+                            "question": "Sublimation is:",
+                            "options": {
+                                "a": "Solid to liquid",
+                                "b": "Liquid to gas",
+                                "c": "Solid to gas",
+                                "d": "Gas to liquid"
+                            },
+                            "answer": "c"
+                        },
+                        {
+                            "question": "Evaporation occurs at:",
+                            "options": {
+                                "a": "Boiling point only",
+                                "b": "Any temperature",
+                                "c": "Freezing point",
+                                "d": "Melting point"
+                            },
+                            "answer": "b"
+                        },
+                        {
+                            "question": "Evaporation causes:",
+                            "options": {
+                                "a": "Heating",
+                                "b": "Cooling",
+                                "c": "Freezing",
+                                "d": "Boiling"
+                            },
+                            "answer": "b"
+                        },
+                        {
+                            "question": "Rate of evaporation increases with:",
+                            "options": {
+                                "a": "Humidity",
+                                "b": "Temperature",
+                                "c": "Pressure",
+                                "d": "Volume"
+                            },
+                            "answer": "b"
+                        },
+                        {
+                            "question": "Humidity affects evaporation by:",
+                            "options": {
+                                "a": "Increasing it",
+                                "b": "Decreasing it",
+                                "c": "No effect",
+                                "d": "Stopping it"
+                            },
+                            "answer": "b"
+                        },
+                        {
+                            "question": "Wind speed:",
+                            "options": {
+                                "a": "Decreases evaporation",
+                                "b": "Increases evaporation",
+                                "c": "No effect",
+                                "d": "Stops evaporation"
+                            },
+                            "answer": "b"
+                        },
+                        {
+                            "question": "Ice floats on water because:",
+                            "options": {
+                                "a": "It is heavier",
+                                "b": "It is less dense",
+                                "c": "It is hotter",
+                                "d": "It is solid"
+                            },
+                            "answer": "b"
+                        }
+                    ]
+                },
+                {
+                    "chapter": "Is Matter Around Us Pure",
+                    "mcqs": [
+                        {
+                            "question": "A pure substance contains:",
+                            "options": {
+                                "a": "Only one type of particles",
+                                "b": "Different types",
+                                "c": "Mixtures",
+                                "d": "Impurities"
+                            },
+                            "answer": "a"
+                        },
+                        {
+                            "question": "A mixture contains:",
+                            "options": {
+                                "a": "One substance",
+                                "b": "Two or more substances",
+                                "c": "Only elements",
+                                "d": "Only compounds"
+                            },
+                            "answer": "b"
+                        },
+                        {
+                            "question": "Solution is:",
+                            "options": {
+                                "a": "Heterogeneous",
+                                "b": "Homogeneous",
+                                "c": "Solid",
+                                "d": "Gas"
+                            },
+                            "answer": "b"
+                        },
+                        {
+                            "question": "Solvent is:",
+                            "options": {
+                                "a": "Dissolved substance",
+                                "b": "Dissolving medium",
+                                "c": "Gas",
+                                "d": "Solid"
+                            },
+                            "answer": "b"
+                        },
+                        {
+                            "question": "Solute is:",
+                            "options": {
+                                "a": "Medium",
+                                "b": "Dissolved substance",
+                                "c": "Liquid",
+                                "d": "Gas"
+                            },
+                            "answer": "b"
+                        },
+                        {
+                            "question": "Colloid is:",
+                            "options": {
+                                "a": "Homogeneous",
+                                "b": "Heterogeneous",
+                                "c": "Pure",
+                                "d": "Solid"
+                            },
+                            "answer": "b"
+                        },
+                        {
+                            "question": "Tyndall effect is shown by:",
+                            "options": {
+                                "a": "Solution",
+                                "b": "Colloid",
+                                "c": "Element",
+                                "d": "Compound"
+                            },
+                            "answer": "b"
+                        },
+                        {
+                            "question": "Suspension is:",
+                            "options": {
+                                "a": "Stable",
+                                "b": "Unstable",
+                                "c": "Pure",
+                                "d": "Gas"
+                            },
+                            "answer": "b"
+                        },
+                        {
+                            "question": "Filtration separates:",
+                            "options": {
+                                "a": "Liquids",
+                                "b": "Solids from liquids",
+                                "c": "Gases",
+                                "d": "Solutions"
+                            },
+                            "answer": "b"
+                        },
+                        {
+                            "question": "Evaporation is used to:",
+                            "options": {
+                                "a": "Cool",
+                                "b": "Separate solids",
+                                "c": "Mix substances",
+                                "d": "Freeze"
+                            },
+                            "answer": "b"
+                        },
+                        {
+                            "question": "Distillation is used for:",
+                            "options": {
+                                "a": "Separating liquids",
+                                "b": "Mixing",
+                                "c": "Heating",
+                                "d": "Cooling"
+                            },
+                            "answer": "a"
+                        },
+                        {
+                            "question": "Chromatography is used for:",
+                            "options": {
+                                "a": "Mixing",
+                                "b": "Separating colours",
+                                "c": "Heating",
+                                "d": "Cooling"
+                            },
+                            "answer": "b"
+                        },
+                        {
+                            "question": "Elements are:",
+                            "options": {
+                                "a": "Pure substances",
+                                "b": "Mixtures",
+                                "c": "Solutions",
+                                "d": "Colloids"
+                            },
+                            "answer": "a"
+                        },
+                        {
+                            "question": "Compounds are:",
+                            "options": {
+                                "a": "Mixtures",
+                                "b": "Pure substances",
+                                "c": "Solutions",
+                                "d": "Suspensions"
+                            },
+                            "answer": "b"
+                        },
+                        {
+                            "question": "Air is:",
+                            "options": {
+                                "a": "Pure",
+                                "b": "Mixture",
+                                "c": "Compound",
+                                "d": "Element"
+                            },
+                            "answer": "b"
+                        },
+                        {
+                            "question": "Brass is:",
+                            "options": {
+                                "a": "Compound",
+                                "b": "Mixture",
+                                "c": "Element",
+                                "d": "Solution"
+                            },
+                            "answer": "b"
+                        },
+                        {
+                            "question": "Water is:",
+                            "options": {
+                                "a": "Mixture",
+                                "b": "Compound",
+                                "c": "Element",
+                                "d": "Gas"
+                            },
+                            "answer": "b"
+                        },
+                        {
+                            "question": "Separation by hand picking is used for:",
+                            "options": {
+                                "a": "Liquids",
+                                "b": "Solids",
+                                "c": "Gases",
+                                "d": "Solutions"
+                            },
+                            "answer": "b"
+                        },
+                        {
+                            "question": "Sieving is used for:",
+                            "options": {
+                                "a": "Liquids",
+                                "b": "Different sized solids",
+                                "c": "Gases",
+                                "d": "Solutions"
+                            },
+                            "answer": "b"
+                        },
+                        {
+                            "question": "Magnetic separation is used for:",
+                            "options": {
+                                "a": "Liquids",
+                                "b": "Magnetic materials",
+                                "c": "Gases",
+                                "d": "Solutions"
+                            },
+                            "answer": "b"
+                        }
+                    ]
+                },
+                {
+                    "chapter": "Atoms and Molecules",
+                    "mcqs": [
+                        {
+                            "question": "Who proposed the idea of 'Parmanu'?",
+                            "options": {
+                                "a": "Dalton",
+                                "b": "Democritus",
+                                "c": "Maharishi Kanad",
+                                "d": "Lavoisier"
+                            },
+                            "answer": "c"
+                        },
+                        {
+                            "question": "The term 'atom' was first used by:",
+                            "options": {
+                                "a": "Dalton",
+                                "b": "Democritus",
+                                "c": "Proust",
+                                "d": "Lavoisier"
+                            },
+                            "answer": "b"
+                        },
+                        {
+                            "question": "Law of conservation of mass states:",
+                            "options": {
+                                "a": "Mass can be created",
+                                "b": "Mass can be destroyed",
+                                "c": "Mass remains constant",
+                                "d": "Mass increases"
+                            },
+                            "answer": "c"
+                        },
+                        {
+                            "question": "Who gave the law of definite proportions?",
+                            "options": {
+                                "a": "Dalton",
+                                "b": "Proust",
+                                "c": "Newton",
+                                "d": "Rutherford"
+                            },
+                            "answer": "b"
+                        },
+                        {
+                            "question": "In water, hydrogen and oxygen combine in ratio:",
+                            "options": {
+                                "a": "1:2",
+                                "b": "2:1",
+                                "c": "1:8",
+                                "d": "8:1"
+                            },
+                            "answer": "c"
+                        },
+                        {
+                            "question": "Dalton\u00e2\u20ac\u2122s atomic theory states atoms are:",
+                            "options": {
+                                "a": "Divisible",
+                                "b": "Indivisible",
+                                "c": "Visible",
+                                "d": "Liquid"
+                            },
+                            "answer": "b"
+                        },
+                        {
+                            "question": "Atomic radius is measured in:",
+                            "options": {
+                                "a": "cm",
+                                "b": "mm",
+                                "c": "nm",
+                                "d": "m"
+                            },
+                            "answer": "c"
+                        },
+                        {
+                            "question": "1 nanometre equals:",
+                            "options": {
+                                "a": "10^-6 m",
+                                "b": "10^-9 m",
+                                "c": "10^-3 m",
+                                "d": "10^-12 m"
+                            },
+                            "answer": "b"
+                        },
+                        {
+                            "question": "Symbol of sodium is:",
+                            "options": {
+                                "a": "So",
+                                "b": "S",
+                                "c": "Na",
+                                "d": "N"
+                            },
+                            "answer": "c"
+                        },
+                        {
+                            "question": "Symbol derived from Latin name:",
+                            "options": {
+                                "a": "Oxygen",
+                                "b": "Iron",
+                                "c": "Hydrogen",
+                                "d": "Carbon"
+                            },
+                            "answer": "b"
+                        },
+                        {
+                            "question": "Atomic mass unit (u) is based on:",
+                            "options": {
+                                "a": "Hydrogen",
+                                "b": "Oxygen",
+                                "c": "Carbon-12",
+                                "d": "Nitrogen"
+                            },
+                            "answer": "c"
+                        },
+                        {
+                            "question": "A molecule is:",
+                            "options": {
+                                "a": "Single atom",
+                                "b": "Group of atoms",
+                                "c": "Ion",
+                                "d": "Electron"
+                            },
+                            "answer": "b"
+                        },
+                        {
+                            "question": "O2 is:",
+                            "options": {
+                                "a": "Monoatomic",
+                                "b": "Diatomic",
+                                "c": "Triatomic",
+                                "d": "Polyatomic"
+                            },
+                            "answer": "b"
+                        },
+                        {
+                            "question": "O3 (ozone) is:",
+                            "options": {
+                                "a": "Monoatomic",
+                                "b": "Diatomic",
+                                "c": "Triatomic",
+                                "d": "Polyatomic"
+                            },
+                            "answer": "c"
+                        },
+                        {
+                            "question": "Atomicity means:",
+                            "options": {
+                                "a": "Mass of atom",
+                                "b": "Size of atom",
+                                "c": "Number of atoms in molecule",
+                                "d": "Charge"
+                            },
+                            "answer": "c"
+                        },
+                        {
+                            "question": "A negatively charged ion is:",
+                            "options": {
+                                "a": "Cation",
+                                "b": "Proton",
+                                "c": "Anion",
+                                "d": "Atom"
+                            },
+                            "answer": "c"
+                        },
+                        {
+                            "question": "Na+ is:",
+                            "options": {
+                                "a": "Anion",
+                                "b": "Cation",
+                                "c": "Neutral",
+                                "d": "Molecule"
+                            },
+                            "answer": "b"
+                        },
+                        {
+                            "question": "Chemical formula represents:",
+                            "options": {
+                                "a": "Colour",
+                                "b": "Structure",
+                                "c": "Composition",
+                                "d": "Size"
+                            },
+                            "answer": "c"
+                        },
+                        {
+                            "question": "Formula of calcium hydroxide is:",
+                            "options": {
+                                "a": "CaOH2",
+                                "b": "Ca(OH)2",
+                                "c": "Ca2OH",
+                                "d": "CaH2O"
+                            },
+                            "answer": "b"
+                        },
+                        {
+                            "question": "Molecular mass of H2O is:",
+                            "options": {
+                                "a": "16",
+                                "b": "17",
+                                "c": "18",
+                                "d": "20"
+                            },
+                            "answer": "c"
+                        }
+                    ]
+                }
+            ]
         },
         {
-          "chapter": "Is Matter Around Us Pure",
-          "mcqs": [ {
-      "question": "A pure substance contains:",
-      "options": {
-        "a": "Only one type of particles",
-        "b": "Different types",
-        "c": "Mixtures",
-        "d": "Impurities"
-      },
-      "answer": "a"
-    },
-    {
-      "question": "A mixture contains:",
-      "options": {
-        "a": "One substance",
-        "b": "Two or more substances",
-        "c": "Only elements",
-        "d": "Only compounds"
-      },
-      "answer": "b"
-    },
-    {
-      "question": "Solution is:",
-      "options": {
-        "a": "Heterogeneous",
-        "b": "Homogeneous",
-        "c": "Solid",
-        "d": "Gas"
-      },
-      "answer": "b"
-    },
-    {
-      "question": "Solvent is:",
-      "options": {
-        "a": "Dissolved substance",
-        "b": "Dissolving medium",
-        "c": "Gas",
-        "d": "Solid"
-      },
-      "answer": "b"
-    },
-    {
-      "question": "Solute is:",
-      "options": {
-        "a": "Medium",
-        "b": "Dissolved substance",
-        "c": "Liquid",
-        "d": "Gas"
-      },
-      "answer": "b"
-    },
-    {
-      "question": "Colloid is:",
-      "options": {
-        "a": "Homogeneous",
-        "b": "Heterogeneous",
-        "c": "Pure",
-        "d": "Solid"
-      },
-      "answer": "b"
-    },
-    {
-      "question": "Tyndall effect is shown by:",
-      "options": {
-        "a": "Solution",
-        "b": "Colloid",
-        "c": "Element",
-        "d": "Compound"
-      },
-      "answer": "b"
-    },
-    {
-      "question": "Suspension is:",
-      "options": {
-        "a": "Stable",
-        "b": "Unstable",
-        "c": "Pure",
-        "d": "Gas"
-      },
-      "answer": "b"
-    },
-    {
-      "question": "Filtration separates:",
-      "options": {
-        "a": "Liquids",
-        "b": "Solids from liquids",
-        "c": "Gases",
-        "d": "Solutions"
-      },
-      "answer": "b"
-    },
-    {
-      "question": "Evaporation is used to:",
-      "options": {
-        "a": "Cool",
-        "b": "Separate solids",
-        "c": "Mix substances",
-        "d": "Freeze"
-      },
-      "answer": "b"
-    },
-    {
-      "question": "Distillation is used for:",
-      "options": {
-        "a": "Separating liquids",
-        "b": "Mixing",
-        "c": "Heating",
-        "d": "Cooling"
-      },
-      "answer": "a"
-    },
-    {
-      "question": "Chromatography is used for:",
-      "options": {
-        "a": "Mixing",
-        "b": "Separating colours",
-        "c": "Heating",
-        "d": "Cooling"
-      },
-      "answer": "b"
-    },
-    {
-      "question": "Elements are:",
-      "options": {
-        "a": "Pure substances",
-        "b": "Mixtures",
-        "c": "Solutions",
-        "d": "Colloids"
-      },
-      "answer": "a"
-    },
-    {
-      "question": "Compounds are:",
-      "options": {
-        "a": "Mixtures",
-        "b": "Pure substances",
-        "c": "Solutions",
-        "d": "Suspensions"
-      },
-      "answer": "b"
-    },
-    {
-      "question": "Air is:",
-      "options": {
-        "a": "Pure",
-        "b": "Mixture",
-        "c": "Compound",
-        "d": "Element"
-      },
-      "answer": "b"
-    },
-    {
-      "question": "Brass is:",
-      "options": {
-        "a": "Compound",
-        "b": "Mixture",
-        "c": "Element",
-        "d": "Solution"
-      },
-      "answer": "b"
-    },
-    {
-      "question": "Water is:",
-      "options": {
-        "a": "Mixture",
-        "b": "Compound",
-        "c": "Element",
-        "d": "Gas"
-      },
-      "answer": "b"
-    },
-    {
-      "question": "Separation by hand picking is used for:",
-      "options": {
-        "a": "Liquids",
-        "b": "Solids",
-        "c": "Gases",
-        "d": "Solutions"
-      },
-      "answer": "b"
-    },
-    {
-      "question": "Sieving is used for:",
-      "options": {
-        "a": "Liquids",
-        "b": "Different sized solids",
-        "c": "Gases",
-        "d": "Solutions"
-      },
-      "answer": "b"
-    },
-    {
-      "question": "Magnetic separation is used for:",
-      "options": {
-        "a": "Liquids",
-        "b": "Magnetic materials",
-        "c": "Gases",
-        "d": "Solutions"
-      },
-      "answer": "b"
-    } ]
-        },
-        {
-          "chapter": "Atoms and Molecules",
-          "mcqs": [ {
-      "question": "Who proposed the idea of 'Parmanu'?",
-      "options": {
-        "a": "Dalton",
-        "b": "Democritus",
-        "c": "Maharishi Kanad",
-        "d": "Lavoisier"
-      },
-      "answer": "c"
-    },
-    {
-      "question": "The term 'atom' was first used by:",
-      "options": {
-        "a": "Dalton",
-        "b": "Democritus",
-        "c": "Proust",
-        "d": "Lavoisier"
-      },
-      "answer": "b"
-    },
-    {
-      "question": "Law of conservation of mass states:",
-      "options": {
-        "a": "Mass can be created",
-        "b": "Mass can be destroyed",
-        "c": "Mass remains constant",
-        "d": "Mass increases"
-      },
-      "answer": "c"
-    },
-    {
-      "question": "Who gave the law of definite proportions?",
-      "options": {
-        "a": "Dalton",
-        "b": "Proust",
-        "c": "Newton",
-        "d": "Rutherford"
-      },
-      "answer": "b"
-    },
-    {
-      "question": "In water, hydrogen and oxygen combine in ratio:",
-      "options": {
-        "a": "1:2",
-        "b": "2:1",
-        "c": "1:8",
-        "d": "8:1"
-      },
-      "answer": "c"
-    },
-    {
-      "question": "Dalton’s atomic theory states atoms are:",
-      "options": {
-        "a": "Divisible",
-        "b": "Indivisible",
-        "c": "Visible",
-        "d": "Liquid"
-      },
-      "answer": "b"
-    },
-    {
-      "question": "Atomic radius is measured in:",
-      "options": {
-        "a": "cm",
-        "b": "mm",
-        "c": "nm",
-        "d": "m"
-      },
-      "answer": "c"
-    },
-    {
-      "question": "1 nanometre equals:",
-      "options": {
-        "a": "10^-6 m",
-        "b": "10^-9 m",
-        "c": "10^-3 m",
-        "d": "10^-12 m"
-      },
-      "answer": "b"
-    },
-    {
-      "question": "Symbol of sodium is:",
-      "options": {
-        "a": "So",
-        "b": "S",
-        "c": "Na",
-        "d": "N"
-      },
-      "answer": "c"
-    },
-    {
-      "question": "Symbol derived from Latin name:",
-      "options": {
-        "a": "Oxygen",
-        "b": "Iron",
-        "c": "Hydrogen",
-        "d": "Carbon"
-      },
-      "answer": "b"
-    },
-    {
-      "question": "Atomic mass unit (u) is based on:",
-      "options": {
-        "a": "Hydrogen",
-        "b": "Oxygen",
-        "c": "Carbon-12",
-        "d": "Nitrogen"
-      },
-      "answer": "c"
-    },
-    {
-      "question": "A molecule is:",
-      "options": {
-        "a": "Single atom",
-        "b": "Group of atoms",
-        "c": "Ion",
-        "d": "Electron"
-      },
-      "answer": "b"
-    },
-    {
-      "question": "O2 is:",
-      "options": {
-        "a": "Monoatomic",
-        "b": "Diatomic",
-        "c": "Triatomic",
-        "d": "Polyatomic"
-      },
-      "answer": "b"
-    },
-    {
-      "question": "O3 (ozone) is:",
-      "options": {
-        "a": "Monoatomic",
-        "b": "Diatomic",
-        "c": "Triatomic",
-        "d": "Polyatomic"
-      },
-      "answer": "c"
-    },
-    {
-      "question": "Atomicity means:",
-      "options": {
-        "a": "Mass of atom",
-        "b": "Size of atom",
-        "c": "Number of atoms in molecule",
-        "d": "Charge"
-      },
-      "answer": "c"
-    },
-    {
-      "question": "A negatively charged ion is:",
-      "options": {
-        "a": "Cation",
-        "b": "Proton",
-        "c": "Anion",
-        "d": "Atom"
-      },
-      "answer": "c"
-    },
-    {
-      "question": "Na+ is:",
-      "options": {
-        "a": "Anion",
-        "b": "Cation",
-        "c": "Neutral",
-        "d": "Molecule"
-      },
-      "answer": "b"
-    },
-    {
-      "question": "Chemical formula represents:",
-      "options": {
-        "a": "Colour",
-        "b": "Structure",
-        "c": "Composition",
-        "d": "Size"
-      },
-      "answer": "c"
-    },
-    {
-      "question": "Formula of calcium hydroxide is:",
-      "options": {
-        "a": "CaOH2",
-        "b": "Ca(OH)2",
-        "c": "Ca2OH",
-        "d": "CaH2O"
-      },
-      "answer": "b"
-    },
-    {
-      "question": "Molecular mass of H2O is:",
-      "options": {
-        "a": "16",
-        "b": "17",
-        "c": "18",
-        "d": "20"
-      },
-      "answer": "c"
-    } ]
+            "subject": "English",
+            "chapters": [
+                {
+                    "chapter": "Unit 1: The Fun They Had and The Road Not Taken",
+                    "parts": [
+                        {
+                            "part": "The Fun They Had",
+                            "mcqs": [
+                                {
+                                    "question": "Who wrote 'The Fun They Had'?",
+                                    "options": {
+                                        "a": "Rabindranath Tagore",
+                                        "b": "Isaac Asimov",
+                                        "c": "R.K. Narayan",
+                                        "d": "Premchand"
+                                    },
+                                    "answer": "b"
+                                },
+                                {
+                                    "question": "What was Margie\u00e2\u20ac\u2122s age?",
+                                    "options": {
+                                        "a": "10 years",
+                                        "b": "11 years",
+                                        "c": "12 years",
+                                        "d": "13 years"
+                                    },
+                                    "answer": "b"
+                                },
+                                {
+                                    "question": "What did Tommy find?",
+                                    "options": {
+                                        "a": "A robot",
+                                        "b": "A book",
+                                        "c": "A computer",
+                                        "d": "A diary"
+                                    },
+                                    "answer": "b"
+                                },
+                                {
+                                    "question": "The book Tommy found was about:",
+                                    "options": {
+                                        "a": "Future schools",
+                                        "b": "Old schools",
+                                        "c": "Robots",
+                                        "d": "Games"
+                                    },
+                                    "answer": "b"
+                                },
+                                {
+                                    "question": "Where did Margie study?",
+                                    "options": {
+                                        "a": "School building",
+                                        "b": "Library",
+                                        "c": "Home",
+                                        "d": "Playground"
+                                    },
+                                    "answer": "c"
+                                },
+                                {
+                                    "question": "Who was Margie\u00e2\u20ac\u2122s teacher?",
+                                    "options": {
+                                        "a": "A human",
+                                        "b": "Her mother",
+                                        "c": "A mechanical teacher",
+                                        "d": "Tommy"
+                                    },
+                                    "answer": "c"
+                                },
+                                {
+                                    "question": "What was the mechanical teacher?",
+                                    "options": {
+                                        "a": "A book",
+                                        "b": "A robot",
+                                        "c": "A computer screen",
+                                        "d": "A machine"
+                                    },
+                                    "answer": "d"
+                                },
+                                {
+                                    "question": "Why did Margie hate school?",
+                                    "options": {
+                                        "a": "Too many students",
+                                        "b": "Mechanical teacher",
+                                        "c": "Long distance",
+                                        "d": "No books"
+                                    },
+                                    "answer": "b"
+                                },
+                                {
+                                    "question": "How were old schools different?",
+                                    "options": {
+                                        "a": "No teachers",
+                                        "b": "Children studied alone",
+                                        "c": "Children studied together",
+                                        "d": "Only machines taught"
+                                    },
+                                    "answer": "c"
+                                },
+                                {
+                                    "question": "What did Margie think about old schools?",
+                                    "options": {
+                                        "a": "Boring",
+                                        "b": "Interesting",
+                                        "c": "Useless",
+                                        "d": "Difficult"
+                                    },
+                                    "answer": "b"
+                                }
+                            ]
+                        },
+                        {
+                            "part": "The Road Not Taken",
+                            "mcqs": [
+                                {
+                                    "question": "Who wrote 'The Road Not Taken'?",
+                                    "options": {
+                                        "a": "William Wordsworth",
+                                        "b": "Robert Frost",
+                                        "c": "John Keats",
+                                        "d": "Shelley"
+                                    },
+                                    "answer": "b"
+                                },
+                                {
+                                    "question": "Where did the traveler stand?",
+                                    "options": {
+                                        "a": "At a river",
+                                        "b": "In a yellow wood",
+                                        "c": "On a mountain",
+                                        "d": "In a city"
+                                    },
+                                    "answer": "b"
+                                },
+                                {
+                                    "question": "What did the traveler face?",
+                                    "options": {
+                                        "a": "A storm",
+                                        "b": "Two roads",
+                                        "c": "A forest fire",
+                                        "d": "A river"
+                                    },
+                                    "answer": "b"
+                                },
+                                {
+                                    "question": "Why couldn\u00e2\u20ac\u2122t the traveler take both roads?",
+                                    "options": {
+                                        "a": "They were dangerous",
+                                        "b": "He was one traveler",
+                                        "c": "They were closed",
+                                        "d": "They were too long"
+                                    },
+                                    "answer": "b"
+                                },
+                                {
+                                    "question": "What was special about the road he chose?",
+                                    "options": {
+                                        "a": "It was crowded",
+                                        "b": "It was well-used",
+                                        "c": "It was less traveled",
+                                        "d": "It was shorter"
+                                    },
+                                    "answer": "c"
+                                },
+                                {
+                                    "question": "What does the road symbolize?",
+                                    "options": {
+                                        "a": "Nature",
+                                        "b": "Life choices",
+                                        "c": "Travel",
+                                        "d": "Adventure"
+                                    },
+                                    "answer": "b"
+                                },
+                                {
+                                    "question": "What did the traveler plan to do later?",
+                                    "options": {
+                                        "a": "Return and take the other road",
+                                        "b": "Forget the journey",
+                                        "c": "Tell others",
+                                        "d": "Write a book"
+                                    },
+                                    "answer": "a"
+                                },
+                                {
+                                    "question": "Why is it unlikely he will return?",
+                                    "options": {
+                                        "a": "He forgot the way",
+                                        "b": "One choice leads to another",
+                                        "c": "He got lost",
+                                        "d": "Road was closed"
+                                    },
+                                    "answer": "b"
+                                },
+                                {
+                                    "question": "What feeling does the poem express at the end?",
+                                    "options": {
+                                        "a": "Happiness",
+                                        "b": "Regret or reflection",
+                                        "c": "Anger",
+                                        "d": "Fear"
+                                    },
+                                    "answer": "b"
+                                },
+                                {
+                                    "question": "What is the main message of the poem?",
+                                    "options": {
+                                        "a": "Travel more",
+                                        "b": "Follow others",
+                                        "c": "Choices shape life",
+                                        "d": "Nature is beautiful"
+                                    },
+                                    "answer": "c"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter": "Unit 2: The Sound of Music and Wind ",
+                    "parts": [
+                        {
+                            "part": "The Sound of Music",
+                            "mcqs": [
+                                {
+                                    "question": "Who is the main character in Part I of 'The Sound of Music'?",
+                                    "options": {
+                                        "a": "Evelyn Glennie",
+                                        "b": "Bismillah Khan",
+                                        "c": "Beethoven",
+                                        "d": "Lata Mangeshkar"
+                                    },
+                                    "answer": "a"
+                                },
+                                {
+                                    "question": "What disability did Evelyn Glennie have?",
+                                    "options": {
+                                        "a": "Blindness",
+                                        "b": "Deafness",
+                                        "c": "Lameness",
+                                        "d": "Mute"
+                                    },
+                                    "answer": "b"
+                                },
+                                {
+                                    "question": "At what age did Evelyn lose her hearing?",
+                                    "options": {
+                                        "a": "5",
+                                        "b": "8",
+                                        "c": "11",
+                                        "d": "15"
+                                    },
+                                    "answer": "c"
+                                },
+                                {
+                                    "question": "Who helped Evelyn to hear music through vibrations?",
+                                    "options": {
+                                        "a": "Her mother",
+                                        "b": "Ron Forbes",
+                                        "c": "Her friend",
+                                        "d": "Doctor"
+                                    },
+                                    "answer": "b"
+                                },
+                                {
+                                    "question": "Evelyn learned to sense music through:",
+                                    "options": {
+                                        "a": "Eyes",
+                                        "b": "Hands and body",
+                                        "c": "Ears",
+                                        "d": "Nose"
+                                    },
+                                    "answer": "b"
+                                },
+                                {
+                                    "question": "Bismillah Khan was famous for playing:",
+                                    "options": {
+                                        "a": "Tabla",
+                                        "b": "Flute",
+                                        "c": "Shehnai",
+                                        "d": "Violin"
+                                    },
+                                    "answer": "c"
+                                },
+                                {
+                                    "question": "Where was Bismillah Khan born?",
+                                    "options": {
+                                        "a": "Delhi",
+                                        "b": "Varanasi",
+                                        "c": "Lucknow",
+                                        "d": "Mumbai"
+                                    },
+                                    "answer": "b"
+                                },
+                                {
+                                    "question": "Which place influenced Bismillah Khan\u00e2\u20ac\u2122s music?",
+                                    "options": {
+                                        "a": "Cinema",
+                                        "b": "Temple of Varanasi",
+                                        "c": "School",
+                                        "d": "Market"
+                                    },
+                                    "answer": "b"
+                                },
+                                {
+                                    "question": "Bismillah Khan refused to:",
+                                    "options": {
+                                        "a": "Play music",
+                                        "b": "Go abroad permanently",
+                                        "c": "Teach",
+                                        "d": "Perform"
+                                    },
+                                    "answer": "b"
+                                },
+                                {
+                                    "question": "Who wrote the poem 'Wind'?",
+                                    "options": {
+                                        "a": "Robert Frost",
+                                        "b": "Subramania Bharati",
+                                        "c": "Tagore",
+                                        "d": "Wordsworth"
+                                    },
+                                    "answer": "b"
+                                },
+                                {
+                                    "question": "What does the wind symbolize?",
+                                    "options": {
+                                        "a": "Happiness",
+                                        "b": "Challenges and difficulties",
+                                        "c": "Love",
+                                        "d": "Peace"
+                                    },
+                                    "answer": "b"
+                                },
+                                {
+                                    "question": "What does the wind break?",
+                                    "options": {
+                                        "a": "Strong houses",
+                                        "b": "Weak structures",
+                                        "c": "Mountains",
+                                        "d": "Rivers"
+                                    },
+                                    "answer": "b"
+                                },
+                                {
+                                    "question": "The poet asks the wind to come:",
+                                    "options": {
+                                        "a": "Softly",
+                                        "b": "Violently",
+                                        "c": "Slowly",
+                                        "d": "Silently"
+                                    },
+                                    "answer": "a"
+                                },
+                                {
+                                    "question": "What should we do to face the wind?",
+                                    "options": {
+                                        "a": "Run away",
+                                        "b": "Make ourselves strong",
+                                        "c": "Hide",
+                                        "d": "Cry"
+                                    },
+                                    "answer": "b"
+                                },
+                                {
+                                    "question": "Wind makes strong people:",
+                                    "options": {
+                                        "a": "Weak",
+                                        "b": "Stronger",
+                                        "c": "Sad",
+                                        "d": "Angry"
+                                    },
+                                    "answer": "b"
+                                },
+                                {
+                                    "question": "What happens to weaklings?",
+                                    "options": {
+                                        "a": "They survive",
+                                        "b": "They break",
+                                        "c": "They grow",
+                                        "d": "They win"
+                                    },
+                                    "answer": "b"
+                                },
+                                {
+                                    "question": "The poem teaches us to:",
+                                    "options": {
+                                        "a": "Fear problems",
+                                        "b": "Face challenges",
+                                        "c": "Avoid work",
+                                        "d": "Sleep"
+                                    },
+                                    "answer": "b"
+                                },
+                                {
+                                    "question": "Wind is called:",
+                                    "options": {
+                                        "a": "Friend",
+                                        "b": "Enemy of weak",
+                                        "c": "Teacher",
+                                        "d": "Helper"
+                                    },
+                                    "answer": "b"
+                                },
+                                {
+                                    "question": "Main theme of the poem is:",
+                                    "options": {
+                                        "a": "Nature beauty",
+                                        "b": "Strength and resilience",
+                                        "c": "Love",
+                                        "d": "War"
+                                    },
+                                    "answer": "b"
+                                },
+                                {
+                                    "question": "What is the main message of the chapter?",
+                                    "options": {
+                                        "a": "Music is difficult",
+                                        "b": "Hard work and passion lead to success",
+                                        "c": "Talent is useless",
+                                        "d": "Only rich succeed"
+                                    },
+                                    "answer": "b"
+                                }
+                            ]
+                        },
+                        {
+                            "part": "Wind",
+                            "mcqs": [
+                                {
+                                    "question": "Who wrote the poem 'Wind'?",
+                                    "options": {
+                                        "a": "Robert Frost",
+                                        "b": "Subramania Bharati",
+                                        "c": "Tagore",
+                                        "d": "Wordsworth"
+                                    },
+                                    "answer": "b"
+                                },
+                                {
+                                    "question": "What does the wind symbolize?",
+                                    "options": {
+                                        "a": "Happiness",
+                                        "b": "Challenges and difficulties",
+                                        "c": "Love",
+                                        "d": "Peace"
+                                    },
+                                    "answer": "b"
+                                },
+                                {
+                                    "question": "What does the wind break?",
+                                    "options": {
+                                        "a": "Strong houses",
+                                        "b": "Weak structures",
+                                        "c": "Mountains",
+                                        "d": "Rivers"
+                                    },
+                                    "answer": "b"
+                                },
+                                {
+                                    "question": "The poet asks the wind to come:",
+                                    "options": {
+                                        "a": "Softly",
+                                        "b": "Violently",
+                                        "c": "Slowly",
+                                        "d": "Silently"
+                                    },
+                                    "answer": "a"
+                                },
+                                {
+                                    "question": "What should we do to face the wind?",
+                                    "options": {
+                                        "a": "Run away",
+                                        "b": "Make ourselves strong",
+                                        "c": "Hide",
+                                        "d": "Cry"
+                                    },
+                                    "answer": "b"
+                                },
+                                {
+                                    "question": "Wind makes strong people:",
+                                    "options": {
+                                        "a": "Weak",
+                                        "b": "Stronger",
+                                        "c": "Sad",
+                                        "d": "Angry"
+                                    },
+                                    "answer": "b"
+                                },
+                                {
+                                    "question": "What happens to weaklings?",
+                                    "options": {
+                                        "a": "They survive",
+                                        "b": "They break",
+                                        "c": "They grow",
+                                        "d": "They win"
+                                    },
+                                    "answer": "b"
+                                },
+                                {
+                                    "question": "The poem teaches us to:",
+                                    "options": {
+                                        "a": "Fear problems",
+                                        "b": "Face challenges",
+                                        "c": "Avoid work",
+                                        "d": "Sleep"
+                                    },
+                                    "answer": "b"
+                                },
+                                {
+                                    "question": "Wind is called:",
+                                    "options": {
+                                        "a": "Friend",
+                                        "b": "Enemy of weak",
+                                        "c": "Teacher",
+                                        "d": "Helper"
+                                    },
+                                    "answer": "b"
+                                },
+                                {
+                                    "question": "Main theme of the poem is:",
+                                    "options": {
+                                        "a": "Nature beauty",
+                                        "b": "Strength and resilience",
+                                        "c": "Love",
+                                        "d": "War"
+                                    },
+                                    "answer": "b"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter": "Unit 3: The Little Girl and Rain on the Root",
+                    "parts": [
+                        {
+                            "part": "The Little Girl",
+                            "mcqs": [
+                                {
+                                    "question": "Who is the little girl in the story?",
+                                    "options": {
+                                        "a": "Margie",
+                                        "b": "Kezia",
+                                        "c": "Evelyn",
+                                        "d": "Alice"
+                                    },
+                                    "answer": "b"
+                                },
+                                {
+                                    "question": "Why was Kezia afraid of her father?",
+                                    "options": {
+                                        "a": "He was strict",
+                                        "b": "He was kind",
+                                        "c": "He was funny",
+                                        "d": "He was absent"
+                                    },
+                                    "answer": "a"
+                                },
+                                {
+                                    "question": "What did Kezia\u00e2\u20ac\u2122s father give her on her birthday?",
+                                    "options": {
+                                        "a": "A toy",
+                                        "b": "A book",
+                                        "c": "A doll house",
+                                        "d": "Nothing"
+                                    },
+                                    "answer": "c"
+                                },
+                                {
+                                    "question": "What mistake did Kezia make?",
+                                    "options": {
+                                        "a": "Broke a toy",
+                                        "b": "Tore papers",
+                                        "c": "Lost money",
+                                        "d": "Broke a glass"
+                                    },
+                                    "answer": "b"
+                                },
+                                {
+                                    "question": "What did Kezia tear to fill the cushion?",
+                                    "options": {
+                                        "a": "Newspaper",
+                                        "b": "Father\u00e2\u20ac\u2122s speech papers",
+                                        "c": "Notebook",
+                                        "d": "Storybook"
+                                    },
+                                    "answer": "b"
+                                },
+                                {
+                                    "question": "What punishment did Kezia get?",
+                                    "options": {
+                                        "a": "Scolding",
+                                        "b": "Beating",
+                                        "c": "Detention",
+                                        "d": "Ignored"
+                                    },
+                                    "answer": "b"
+                                },
+                                {
+                                    "question": "Who comforted Kezia when she had a nightmare?",
+                                    "options": {
+                                        "a": "Mother",
+                                        "b": "Grandmother",
+                                        "c": "Father",
+                                        "d": "Servant"
+                                    },
+                                    "answer": "c"
+                                },
+                                {
+                                    "question": "What did Kezia realize about her father?",
+                                    "options": {
+                                        "a": "He was cruel",
+                                        "b": "He loved her",
+                                        "c": "He was careless",
+                                        "d": "He was lazy"
+                                    },
+                                    "answer": "b"
+                                },
+                                {
+                                    "question": "What changed Kezia\u00e2\u20ac\u2122s opinion about her father?",
+                                    "options": {
+                                        "a": "Gift",
+                                        "b": "Punishment",
+                                        "c": "Nightmare incident",
+                                        "d": "School"
+                                    },
+                                    "answer": "c"
+                                },
+                                {
+                                    "question": "What is the main theme of the story?",
+                                    "options": {
+                                        "a": "Fear",
+                                        "b": "Love and understanding",
+                                        "c": "Anger",
+                                        "d": "Discipline only"
+                                    },
+                                    "answer": "b"
+                                }
+                            ]
+                        },
+                        {
+                            "part": "Rain on the Root",
+                            "mcqs": [
+                                {
+                                    "question": "Who wrote 'Rain on the Roof'?",
+                                    "options": {
+                                        "a": "Robert Frost",
+                                        "b": "Coates Kinney",
+                                        "c": "Tagore",
+                                        "d": "Wordsworth"
+                                    },
+                                    "answer": "b"
+                                },
+                                {
+                                    "question": "When does the poet enjoy the rain?",
+                                    "options": {
+                                        "a": "Morning",
+                                        "b": "Afternoon",
+                                        "c": "Night",
+                                        "d": "Evening"
+                                    },
+                                    "answer": "c"
+                                },
+                                {
+                                    "question": "What sound does the rain make?",
+                                    "options": {
+                                        "a": "Loud noise",
+                                        "b": "Melancholy tinkle",
+                                        "c": "Silence",
+                                        "d": "Roaring"
+                                    },
+                                    "answer": "b"
+                                },
+                                {
+                                    "question": "What does the poet do while listening to rain?",
+                                    "options": {
+                                        "a": "Sleep",
+                                        "b": "Dance",
+                                        "c": "Dream",
+                                        "d": "Run"
+                                    },
+                                    "answer": "c"
+                                },
+                                {
+                                    "question": "The rain brings memories of:",
+                                    "options": {
+                                        "a": "Friends",
+                                        "b": "Childhood",
+                                        "c": "Nature",
+                                        "d": "Travel"
+                                    },
+                                    "answer": "b"
+                                },
+                                {
+                                    "question": "Who does the poet remember most?",
+                                    "options": {
+                                        "a": "Father",
+                                        "b": "Mother",
+                                        "c": "Friend",
+                                        "d": "Teacher"
+                                    },
+                                    "answer": "b"
+                                },
+                                {
+                                    "question": "Where was the poet lying?",
+                                    "options": {
+                                        "a": "Garden",
+                                        "b": "Bed",
+                                        "c": "Road",
+                                        "d": "School"
+                                    },
+                                    "answer": "b"
+                                },
+                                {
+                                    "question": "What is the mood of the poem?",
+                                    "options": {
+                                        "a": "Happy",
+                                        "b": "Melancholic",
+                                        "c": "Angry",
+                                        "d": "Excited"
+                                    },
+                                    "answer": "b"
+                                },
+                                {
+                                    "question": "Rain is described as:",
+                                    "options": {
+                                        "a": "Loud",
+                                        "b": "Soothing",
+                                        "c": "Harsh",
+                                        "d": "Dangerous"
+                                    },
+                                    "answer": "b"
+                                },
+                                {
+                                    "question": "Main theme of the poem is:",
+                                    "options": {
+                                        "a": "Nature\u00e2\u20ac\u2122s beauty and memories",
+                                        "b": "Fear",
+                                        "c": "War",
+                                        "d": "Adventure"
+                                    },
+                                    "answer": "a"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         }
-      ]
-    },
-    {
-      "subject": "English",
-      "chapters": [
-        {
-          "chapter": "Unit 1: The Fun They Had and The Road Not Taken",
-          "parts": [
-        {
-          "part": "The Fun They Had",
-          "mcqs": [ {
-      "question": "Who wrote 'The Fun They Had'?",
-      "options": {
-        "a": "Rabindranath Tagore",
-        "b": "Isaac Asimov",
-        "c": "R.K. Narayan",
-        "d": "Premchand"
-      },
-      "answer": "b"
-    },
-    {
-      "question": "What was Margie’s age?",
-      "options": {
-        "a": "10 years",
-        "b": "11 years",
-        "c": "12 years",
-        "d": "13 years"
-      },
-      "answer": "b"
-    },
-    {
-      "question": "What did Tommy find?",
-      "options": {
-        "a": "A robot",
-        "b": "A book",
-        "c": "A computer",
-        "d": "A diary"
-      },
-      "answer": "b"
-    },
-    {
-      "question": "The book Tommy found was about:",
-      "options": {
-        "a": "Future schools",
-        "b": "Old schools",
-        "c": "Robots",
-        "d": "Games"
-      },
-      "answer": "b"
-    },
-    {
-      "question": "Where did Margie study?",
-      "options": {
-        "a": "School building",
-        "b": "Library",
-        "c": "Home",
-        "d": "Playground"
-      },
-      "answer": "c"
-    },
-    {
-      "question": "Who was Margie’s teacher?",
-      "options": {
-        "a": "A human",
-        "b": "Her mother",
-        "c": "A mechanical teacher",
-        "d": "Tommy"
-      },
-      "answer": "c"
-    },
-    {
-      "question": "What was the mechanical teacher?",
-      "options": {
-        "a": "A book",
-        "b": "A robot",
-        "c": "A computer screen",
-        "d": "A machine"
-      },
-      "answer": "d"
-    },
-    {
-      "question": "Why did Margie hate school?",
-      "options": {
-        "a": "Too many students",
-        "b": "Mechanical teacher",
-        "c": "Long distance",
-        "d": "No books"
-      },
-      "answer": "b"
-    },
-    {
-      "question": "How were old schools different?",
-      "options": {
-        "a": "No teachers",
-        "b": "Children studied alone",
-        "c": "Children studied together",
-        "d": "Only machines taught"
-      },
-      "answer": "c"
-    },
-    {
-      "question": "What did Margie think about old schools?",
-      "options": {
-        "a": "Boring",
-        "b": "Interesting",
-        "c": "Useless",
-        "d": "Difficult"
-      },
-      "answer": "b"
-    } ]
-        },
-        {
-          "part": "The Road Not Taken",
-          "mcqs": [ {
-      "question": "Who wrote 'The Road Not Taken'?",
-      "options": {
-        "a": "William Wordsworth",
-        "b": "Robert Frost",
-        "c": "John Keats",
-        "d": "Shelley"
-      },
-      "answer": "b"
-    },
-    {
-      "question": "Where did the traveler stand?",
-      "options": {
-        "a": "At a river",
-        "b": "In a yellow wood",
-        "c": "On a mountain",
-        "d": "In a city"
-      },
-      "answer": "b"
-    },
-    {
-      "question": "What did the traveler face?",
-      "options": {
-        "a": "A storm",
-        "b": "Two roads",
-        "c": "A forest fire",
-        "d": "A river"
-      },
-      "answer": "b"
-    },
-    {
-      "question": "Why couldn’t the traveler take both roads?",
-      "options": {
-        "a": "They were dangerous",
-        "b": "He was one traveler",
-        "c": "They were closed",
-        "d": "They were too long"
-      },
-      "answer": "b"
-    },
-    {
-      "question": "What was special about the road he chose?",
-      "options": {
-        "a": "It was crowded",
-        "b": "It was well-used",
-        "c": "It was less traveled",
-        "d": "It was shorter"
-      },
-      "answer": "c"
-    },
-    {
-      "question": "What does the road symbolize?",
-      "options": {
-        "a": "Nature",
-        "b": "Life choices",
-        "c": "Travel",
-        "d": "Adventure"
-      },
-      "answer": "b"
-    },
-    {
-      "question": "What did the traveler plan to do later?",
-      "options": {
-        "a": "Return and take the other road",
-        "b": "Forget the journey",
-        "c": "Tell others",
-        "d": "Write a book"
-      },
-      "answer": "a"
-    },
-    {
-      "question": "Why is it unlikely he will return?",
-      "options": {
-        "a": "He forgot the way",
-        "b": "One choice leads to another",
-        "c": "He got lost",
-        "d": "Road was closed"
-      },
-      "answer": "b"
-    },
-    {
-      "question": "What feeling does the poem express at the end?",
-      "options": {
-        "a": "Happiness",
-        "b": "Regret or reflection",
-        "c": "Anger",
-        "d": "Fear"
-      },
-      "answer": "b"
-    },
-    {
-      "question": "What is the main message of the poem?",
-      "options": {
-        "a": "Travel more",
-        "b": "Follow others",
-        "c": "Choices shape life",
-        "d": "Nature is beautiful"
-      },
-      "answer": "c"
-    } ]
-        }
-      ]
-        },
-        {
-          "chapter": "Unit 2: The Sound of Music and Wind ",
-          "parts": [
+    ],
+    "eng": {
+        "1": [
             {
-              "part": "The Sound of Music",
-              "mcqs": [ {
-          "question": "Who is the main character in Part I of 'The Sound of Music'?",
-          "options": {"a": "Evelyn Glennie","b": "Bismillah Khan","c": "Beethoven","d": "Lata Mangeshkar"},
-          "answer": "a"
-        },
-        {
-          "question": "What disability did Evelyn Glennie have?",
-          "options": {"a": "Blindness","b": "Deafness","c": "Lameness","d": "Mute"},
-          "answer": "b"
-        },
-        {
-          "question": "At what age did Evelyn lose her hearing?",
-          "options": {"a": "5","b": "8","c": "11","d": "15"},
-          "answer": "c"
-        },
-        {
-          "question": "Who helped Evelyn to hear music through vibrations?",
-          "options": {"a": "Her mother","b": "Ron Forbes","c": "Her friend","d": "Doctor"},
-          "answer": "b"
-        },
-        {
-          "question": "Evelyn learned to sense music through:",
-          "options": {"a": "Eyes","b": "Hands and body","c": "Ears","d": "Nose"},
-          "answer": "b"
-        },
-        {
-          "question": "Bismillah Khan was famous for playing:",
-          "options": {"a": "Tabla","b": "Flute","c": "Shehnai","d": "Violin"},
-          "answer": "c"
-        },
-        {
-          "question": "Where was Bismillah Khan born?",
-          "options": {"a": "Delhi","b": "Varanasi","c": "Lucknow","d": "Mumbai"},
-          "answer": "b"
-        },
-        {
-          "question": "Which place influenced Bismillah Khan’s music?",
-          "options": {"a": "Cinema","b": "Temple of Varanasi","c": "School","d": "Market"},
-          "answer": "b"
-        },
-        {
-          "question": "Bismillah Khan refused to:",
-          "options": {"a": "Play music","b": "Go abroad permanently","c": "Teach","d": "Perform"},
-          "answer": "b"
-        },
-        { 
-          "question": "Who wrote the poem 'Wind'?",
-          "options": {"a": "Robert Frost","b": "Subramania Bharati","c": "Tagore","d": "Wordsworth"},
-          "answer": "b"
-        },
-        {
-          "question": "What does the wind symbolize?",
-          "options": {"a": "Happiness","b": "Challenges and difficulties","c": "Love","d": "Peace"},
-          "answer": "b"
-        },
-        {
-          "question": "What does the wind break?",
-          "options": {"a": "Strong houses","b": "Weak structures","c": "Mountains","d": "Rivers"},
-          "answer": "b"
-        },
-        {
-          "question": "The poet asks the wind to come:",
-          "options": {"a": "Softly","b": "Violently","c": "Slowly","d": "Silently"},
-          "answer": "a"
-        },
-        {
-          "question": "What should we do to face the wind?",
-          "options": {"a": "Run away","b": "Make ourselves strong","c": "Hide","d": "Cry"},
-          "answer": "b"
-        },
-        {
-          "question": "Wind makes strong people:",
-          "options": {"a": "Weak","b": "Stronger","c": "Sad","d": "Angry"},
-          "answer": "b"
-        },
-        {
-          "question": "What happens to weaklings?",
-          "options": {"a": "They survive","b": "They break","c": "They grow","d": "They win"},
-          "answer": "b"
-        },
-        {
-          "question": "The poem teaches us to:",
-          "options": {"a": "Fear problems","b": "Face challenges","c": "Avoid work","d": "Sleep"},
-          "answer": "b"
-        },
-        {
-          "question": "Wind is called:",
-          "options": {"a": "Friend","b": "Enemy of weak","c": "Teacher","d": "Helper"},
-          "answer": "b"
-        },
-        {
-          "question": "Main theme of the poem is:",
-          "options": {"a": "Nature beauty","b": "Strength and resilience","c": "Love","d": "War"},
-          "answer": "b"
-        },
-        {
-          "question": "What is the main message of the chapter?",
-          "options": {"a": "Music is difficult","b": "Hard work and passion lead to success","c": "Talent is useless","d": "Only rich succeed"},
-          "answer": "b"
-        } ]
-            },
-            {
-              "part": "Wind",
-              "mcqs": [ {
-          "question": "Who wrote the poem 'Wind'?",
-          "options": {"a": "Robert Frost","b": "Subramania Bharati","c": "Tagore","d": "Wordsworth"},
-          "answer": "b"
-        },
-        {
-          "question": "What does the wind symbolize?",
-          "options": {"a": "Happiness","b": "Challenges and difficulties","c": "Love","d": "Peace"},
-          "answer": "b"
-        },
-        {
-          "question": "What does the wind break?",
-          "options": {"a": "Strong houses","b": "Weak structures","c": "Mountains","d": "Rivers"},
-          "answer": "b"
-        },
-        {
-          "question": "The poet asks the wind to come:",
-          "options": {"a": "Softly","b": "Violently","c": "Slowly","d": "Silently"},
-          "answer": "a"
-        },
-        {
-          "question": "What should we do to face the wind?",
-          "options": {"a": "Run away","b": "Make ourselves strong","c": "Hide","d": "Cry"},
-          "answer": "b"
-        },
-        {
-          "question": "Wind makes strong people:",
-          "options": {"a": "Weak","b": "Stronger","c": "Sad","d": "Angry"},
-          "answer": "b"
-        },
-        {
-          "question": "What happens to weaklings?",
-          "options": {"a": "They survive","b": "They break","c": "They grow","d": "They win"},
-          "answer": "b"
-        },
-        {
-          "question": "The poem teaches us to:",
-          "options": {"a": "Fear problems","b": "Face challenges","c": "Avoid work","d": "Sleep"},
-          "answer": "b"
-        },
-        {
-          "question": "Wind is called:",
-          "options": {"a": "Friend","b": "Enemy of weak","c": "Teacher","d": "Helper"},
-          "answer": "b"
-        },
-        {
-          "question": "Main theme of the poem is:",
-          "options": {"a": "Nature beauty","b": "Strength and resilience","c": "Love","d": "War"},
-          "answer": "b"
-        } ]
+                "question": "Sample Q?",
+                "options": [
+                    "A",
+                    "B",
+                    "C",
+                    "D"
+                ],
+                "answer": "A"
             }
-          ]
-        },
-        {
-          "chapter": "Unit 3: The Little Girl and Rain on the Root",
-          "parts": [
-            {
-              "part": "The Little Girl",
-              "mcqs": [ {
-          "question": "Who is the little girl in the story?",
-          "options": {"a": "Margie","b": "Kezia","c": "Evelyn","d": "Alice"},
-          "answer": "b"
-        },
-        {
-          "question": "Why was Kezia afraid of her father?",
-          "options": {"a": "He was strict","b": "He was kind","c": "He was funny","d": "He was absent"},
-          "answer": "a"
-        },
-        {
-          "question": "What did Kezia’s father give her on her birthday?",
-          "options": {"a": "A toy","b": "A book","c": "A doll house","d": "Nothing"},
-          "answer": "c"
-        },
-        {
-          "question": "What mistake did Kezia make?",
-          "options": {"a": "Broke a toy","b": "Tore papers","c": "Lost money","d": "Broke a glass"},
-          "answer": "b"
-        },
-        {
-          "question": "What did Kezia tear to fill the cushion?",
-          "options": {"a": "Newspaper","b": "Father’s speech papers","c": "Notebook","d": "Storybook"},
-          "answer": "b"
-        },
-        {
-          "question": "What punishment did Kezia get?",
-          "options": {"a": "Scolding","b": "Beating","c": "Detention","d": "Ignored"},
-          "answer": "b"
-        },
-        {
-          "question": "Who comforted Kezia when she had a nightmare?",
-          "options": {"a": "Mother","b": "Grandmother","c": "Father","d": "Servant"},
-          "answer": "c"
-        },
-        {
-          "question": "What did Kezia realize about her father?",
-          "options": {"a": "He was cruel","b": "He loved her","c": "He was careless","d": "He was lazy"},
-          "answer": "b"
-        },
-        {
-          "question": "What changed Kezia’s opinion about her father?",
-          "options": {"a": "Gift","b": "Punishment","c": "Nightmare incident","d": "School"},
-          "answer": "c"
-        },
-        {
-          "question": "What is the main theme of the story?",
-          "options": {"a": "Fear","b": "Love and understanding","c": "Anger","d": "Discipline only"},
-          "answer": "b"
-        } ]
-            },
-            {
-              "part": "Rain on the Root",
-              "mcqs": [ {
-          "question": "Who wrote 'Rain on the Roof'?",
-          "options": {"a": "Robert Frost","b": "Coates Kinney","c": "Tagore","d": "Wordsworth"},
-          "answer": "b"
-        },
-        {
-          "question": "When does the poet enjoy the rain?",
-          "options": {"a": "Morning","b": "Afternoon","c": "Night","d": "Evening"},
-          "answer": "c"
-        },
-        {
-          "question": "What sound does the rain make?",
-          "options": {"a": "Loud noise","b": "Melancholy tinkle","c": "Silence","d": "Roaring"},
-          "answer": "b"
-        },
-        {
-          "question": "What does the poet do while listening to rain?",
-          "options": {"a": "Sleep","b": "Dance","c": "Dream","d": "Run"},
-          "answer": "c"
-        },
-        {
-          "question": "The rain brings memories of:",
-          "options": {"a": "Friends","b": "Childhood","c": "Nature","d": "Travel"},
-          "answer": "b"
-        },
-        {
-          "question": "Who does the poet remember most?",
-          "options": {"a": "Father","b": "Mother","c": "Friend","d": "Teacher"},
-          "answer": "b"
-        },
-        {
-          "question": "Where was the poet lying?",
-          "options": {"a": "Garden","b": "Bed","c": "Road","d": "School"},
-          "answer": "b"
-        },
-        {
-          "question": "What is the mood of the poem?",
-          "options": {"a": "Happy","b": "Melancholic","c": "Angry","d": "Excited"},
-          "answer": "b"
-        },
-        {
-          "question": "Rain is described as:",
-          "options": {"a": "Loud","b": "Soothing","c": "Harsh","d": "Dangerous"},
-          "answer": "b"
-        },
-        {
-          "question": "Main theme of the poem is:",
-          "options": {"a": "Nature’s beauty and memories","b": "Fear","c": "War","d": "Adventure"},
-          "answer": "a"
-        } ]
-            }
-          ]
-        }
-
-      ]
+        ]
     }
-  ]
 }

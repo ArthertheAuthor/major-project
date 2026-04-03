@@ -1,8 +1,16 @@
 from utils.data_handler import *
 
-print("Subjects:", get_subject_list())
-print("Chapters:", get_chapter_list("eng"))
-print("Text:", get_chapter_text("eng", 1)[:100])
+# Test questions
+print("Questions BEFORE:", get_questions("eng", 1))
 
-update_score("eng", 1, 5)
-print("Score:", get_score("eng", 1))
+sample_questions = [
+    {
+        "question": "Sample Q?",
+        "options": ["A", "B", "C", "D"],
+        "answer": "A"
+    }
+]
+
+save_questions("eng", 1, sample_questions)
+
+print("Questions AFTER:", get_questions("eng", 1))

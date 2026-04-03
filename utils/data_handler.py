@@ -38,7 +38,7 @@ def get_chapters_by_subject(subject_id):
     return []
 
 
-# ✅ ADDED: Clean chapter list for UI
+#  ADDED: Clean chapter list for UI
 def get_chapter_list(subject_id):
     chapters = get_chapters_by_subject(subject_id)
     return [
@@ -105,3 +105,21 @@ def get_score(subject_id, chapter_id):
         "best_score": 0,
         "last_score": 0
     })
+
+# ---------- QUESTIONS (QUIZ CACHE) ----------
+
+def get_questions(subject_id, chapter_id):
+    data = load_json("data/questions.json")
+    return data.get(subject_id, {}).get(str(chapter_id), [])
+
+
+def save_questions(subject_id, chapter_id, questions):
+    data = load_json("data/questions.json")
+
+    if subject_id not in data:
+        data[subject_id] = {}
+
+    data[subject_id][str(chapter_id)] = questions
+
+    save_json("data/questions.json", data)
+    
