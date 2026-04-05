@@ -1,15 +1,15 @@
-# EduEdge AI 
+# EduAi 
 **Empowering Rural Education through Offline-First, Hardware-Adaptive AI.**
 
-![EduEdge AI Prototype](icon.png) *(Note: Add your icon.png here)*
+![EduAi Prototype](icon.png) *(Note: Add your icon.png here)*
 
 ## The Problem
 Millions of students in rural areas face a massive digital divide. While urban students leverage cloud-based AI tools to accelerate their learning, rural students are often restricted by zero internet connectivity and low-end hardware (typically secondhand smartphones with 4GB of RAM). Modern EdTech solutions, heavily reliant on continuous cloud connectivity, are leaving these students behind.
 
 ## Our Solution
-EduEdge AI is a fully offline, Progressive Web App (PWA) designed to bring the power of an educational neural engine directly to the "edge." We do not bring the student to the cloud; we bring the intelligence to the device. 
+EduAi is a fully offline, Progressive Web App (PWA) designed to bring the power of an educational neural engine directly to the "edge." We do not bring the student to the cloud; we bring the intelligence to the device. 
 
-By caching the NCERT curriculum and utilizing a hardware-adaptive architecture, EduEdge AI delivers dynamic summaries, mindmaps, and quizzes without requiring a continuous internet connection.
+By caching the NCERT curriculum and utilizing a hardware-adaptive architecture, EduAi delivers dynamic summaries, mindmaps, and quizzes without requiring a continuous internet connection.
 
 ## Key Features
 
@@ -36,7 +36,7 @@ You can run the frontend using any basic local development server.
 If you have Python installed:
 ```bash
 # Navigate to the project directory
-cd eduedge-ai
+cd eduai
 
 # Start a local web server
 python -m http.server 8000
