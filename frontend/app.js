@@ -264,14 +264,70 @@ async function fetchQuiz() {
                 body: JSON.stringify({ subject: currentSubject, chapter_id: currentChapter.id })
             });
             const data = await res.json();
+            
             let html = `<h4 class="text-xs uppercase font-black border-b-2 border-black mb-3">Assessment</h4>`;
+            
             data.quiz.forEach((q, i) => {
-                html += `<div class="mb-4 p-3 border-2 border-black bg-white shadow-[3px_3px_0px_#111]">
+                // Encode answer to safely handle words with apostrophes like "Father's"
+                const safeCorrect = encodeURIComponent(q.answer);
+                
+                html += `<div class="mb-4 p-3 border-2 border-black bg-white shadow-[3px_3px_0px_#111] quiz-container" data-correct="${safeCorrect}">
                         <p class="font-black mb-2 text-[10px]">${i + 1}. ${q.question}</p>
-                        <div class="space-y-1">${q.options.map(opt => `<label class="block p-1 border border-gray-300 font-bold text-[9px]"><input type="radio" name="q${i}" class="mr-2"> ${opt}</label>`).join('')}</div>
-                    </div>`;
+                        <div class="space-y-2">`;
+                        
+                q.options.forEach(opt => {
+                    const safeOpt = encodeURIComponent(opt);
+                    html += `
+                        <label class="block p-2 border border-gray-300 font-bold text-[9px] cursor-pointer hover:bg-gray-100 transition-all">
+                            <input type="radio" name="q${i}" value="${safeOpt}" class="mr-2" onchange="checkAnswer(this)"> 
+                            ${opt}
+                        </label>`;
+                });
+                
+                html += `</div></div>`;
             });
             document.getElementById("ai-content-box").innerHTML = html;
-        } catch (e) { alert("Backend Quiz Data Missing."); } finally { hideLoader(); }
+        } catch (e) { 
+            alert("Backend Quiz Data Missing."); 
+        } finally { 
+            hideLoader(); 
+        }
     }, 1200);
+}
+
+// --- INTERACTIVE QUIZ LOGIC ---
+function checkAnswer(radioInput) {
+    // 1. Find the parent container and get the encoded correct answer
+    const container = radioInput.closest('.quiz-container');
+    const correctEncoded = container.getAttribute('data-correct');
+    const selectedEncoded = radioInput.value;
+
+    // 2. Disable all radio buttons in this specific question so they can only guess once
+    const allRadios = container.querySelectorAll('input[type="radio"]');
+    allRadios.forEach(r => r.disabled = true);
+
+    // 3. Find the label the user just clicked
+    const selectedLabel = radioInput.closest('label');
+    selectedLabel.classList.remove('border-gray-300', 'hover:bg-gray-100');
+
+    // 4. Evaluate the answer
+    if (selectedEncoded === correctEncoded) {
+        // CORRECT: Turn the label Green
+        selectedLabel.classList.add('bg-green-200', 'border-green-600', 'text-green-900');
+        selectedLabel.innerHTML += ' <span class="float-right text-green-700 text-xs">✅</span>';
+    } else {
+        // WRONG: Turn the label Red
+        selectedLabel.classList.add('bg-red-200', 'border-red-600', 'text-red-900');
+        selectedLabel.innerHTML += ' <span class="float-right text-red-700 text-xs">❌</span>';
+
+        // Find and highlight the actual correct answer in light green so the student learns
+        const allLabels = container.querySelectorAll('label');
+        allLabels.forEach(lbl => {
+            const inputInside = lbl.querySelector('input');
+            if (inputInside.value === correctEncoded) {
+                lbl.classList.remove('border-gray-300');
+                lbl.classList.add('bg-green-50', 'border-green-500', 'border-dashed');
+            }
+        });
+    }
 }
