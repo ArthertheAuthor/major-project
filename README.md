@@ -1,7 +1,7 @@
 # EduAi 
 **Empowering Rural Education through Offline-First, Hardware-Adaptive AI.**
 
-![EduAi Prototype](icon.png) *(Note: Add your icon.png here)*
+![EduAi Prototype](Eduai.png) 
 
 ## The Problem
 Millions of students in rural areas face a massive digital divide. While urban students leverage cloud-based AI tools to accelerate their learning, rural students are often restricted by zero internet connectivity and low-end hardware (typically secondhand smartphones with 4GB of RAM). Modern EdTech solutions, heavily reliant on continuous cloud connectivity, are leaving these students behind.
